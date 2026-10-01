@@ -78,3 +78,5 @@ footer.ft .ft-btn:hover { border-color: var(--red) !important; }
   .first-screen .ha-b1, .first-screen .ha-b2 { height: min(40%, 19vw); }
 }
 @media (max-width: 1099px) { .hd4-in { grid-template-columns: 1fr auto; } }
+/* в подвале линия под полосой преимуществ остаётся (уточнение пользователя) */
+footer.ft .ft-adv { border-bottom: 1px solid var(--dark-line) !important; }
