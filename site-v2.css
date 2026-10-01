@@ -188,3 +188,6 @@ body::before { display: none !important; }
 .mp-logo img[src$="mp-wb.svg"] { height: 19px; }
 .mp-logo img[src$="mp-ym.svg"] { height: 26px; }
 .buy2-card .hbuy-t { justify-content: space-between; }
+/* «Оригинал»: вырезанный оборот вплотную к верху карточки, низ — где был конец фото */
+.orig1 .orig-pic { padding: 0 24px 24px; align-items: flex-start; }
+.ob-pack2 { aspect-ratio: 1194 / 712; }
