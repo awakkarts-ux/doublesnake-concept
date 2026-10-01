@@ -23,12 +23,15 @@
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
   <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
 </svg>
-<header class="hd hd1">
-  <a class="hd-cell hd-brand" href="index.html" aria-label="Дабл Снейк — на главную"><span class="hd-logo" aria-hidden="true"></span><b>Дабл Снейк</b></a>
-  <nav class="hd-cell hd-main" aria-label="Продукция и покупка"><a href="index.html#lineup" class="on" aria-current="page">Продукция<sup>23</sup></a><a href="index.html#buy">Где купить<sup>3</sup></a></nav>
-  <nav class="hd-cell hd-main" aria-label="Оригинал и опт"><a href="index.html#original">Оригинал</a><a href="index.html#opt" class="hd-opt">Оптовикам</a></nav>
-  <nav class="hd-cell hd-links" aria-label="О бренде"><a href="index.html#about">О компании</a><a href="index.html#faq">FAQ</a><a href="#contacts">Контакты</a></nav>
+<header class="hd hd4">
+  <div class="hd4-in">
+    <nav class="hd4-nav" aria-label="Разделы"><a href="index.html#lineup" class="on" aria-current="page">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#about">О компании</a><a href="index.html#faq">FAQ</a><a href="#contacts">Контакты</a></nav>
+    <a class="hd4-logo" href="index.html" aria-label="Дабл Снейк — на главную"><img src="img/logo-word.png" alt="Дабл Снейк"></a>
+    <div class="hd4-act"><button class="btn btn-red hd-btn" type="button" data-contact>Связаться</button></div>
+  </div>
 </header>
 <div class="app app-pd">
 <main>
@@ -38,41 +41,25 @@
       <a href="index.html#lineup">Продукция</a><a href="index.html#lineup">Дабл Снейк</a><span aria-current="page">C48 Extreme</span>
     </nav>
 
-    <div class="pd-gal">
-      <div class="pd-thumbs" role="tablist" aria-label="Фото товара">
-        <button role="tab" aria-selected="true" data-slide="0" aria-label="Пакет, лицевая сторона"><img src="img/c48.png" alt=""></button>
-        <button role="tab" aria-selected="false" data-slide="1" aria-label="Оборот пакета"><span>Оборот</span></button>
-        <button role="tab" aria-selected="false" data-slide="2" aria-label="Признаки оригинала"><svg class="i"><use href="#i-shield"/></svg></button>
-      </div>
+    <div class="pd-gal pd-gal1">
       <div class="pd-stage">
         <span class="tag red">До 21% крепости</span>
         <figure class="pd-slide on"><img src="img/c48.png" alt="Пакет Double Snake C48 Extreme"></figure>
-        <figure class="pd-slide ph"><figcaption>Оборот пакета с таблицей режимов<span class="todo">фото — от клиента</span></figcaption></figure>
-        <figure class="pd-slide ph"><figcaption>Крупно: признаки оригинальной пачки<span class="todo">фото — от клиента</span></figcaption></figure>
       </div>
     </div>
 
     <div class="pd-info">
-      <div class="pd-code">Дабл Снейк · <span class="red">01/05</span></div>
       <h1 class="display d1">C48<br>Extreme</h1>
       <div class="pd-acts">
         <div class="pd-acts-l">
-          <div class="label-s">Линейка</div>
-          <div class="pd-brand">Дабл Снейк</div>
-          <ul class="pd-badges">
-            <li title="Флагман линейки"><svg class="i"><use href="#i-star"/></svg></li>
-            <li title="Повышенная крепость"><svg class="i"><use href="#i-flame"/></svg></li>
-            <li><b>130</b> г</li>
-            <li><b>26</b> л</li>
-          </ul>
+          <img class="pd-logo" src="img/logo-word.png" alt="Дабл Снейк">
         </div>
         <div class="pd-acts-r">
           <div class="label-s">Крепость браги</div>
           <div class="pd-num">до 21%</div>
           <a class="btn btn-red btn-block" href="https://www.wildberries.ru/catalog/183913306/detail.aspx">Купить на WB</a>
           <div class="pd-mp"><a class="btn btn-dark btn-s" href="#">Ozon</a><a class="btn btn-dark btn-s" href="#">Я.Маркет</a></div>
-          <a class="pd-opt" href="index.html#opt">Прайс для опта <svg class="i"><use href="#i-arrow"/></svg></a>
-          <a class="pd-opt" href="index.html#original">Как отличить оригинал <svg class="i"><use href="#i-arrow"/></svg></a>
+          <a class="pd-opt" href="#contact" data-contact>Опт и вопросы — связаться <svg class="i"><use href="#i-arrow"/></svg></a>
         </div>
       </div>
       <p class="pd-lead">Спиртовые турбо-дрожжи для браги повышенной крепости. Один пакет на 26 литров, брожение от 2 дней.</p>
@@ -113,7 +100,6 @@
           <li><span>Срок годности</span><b>24 мес</b></li>
           <li><span>Хранение</span><b>−10…+35 °C, сухое место</b></li>
           <li><span>ГМО</span><b>нет</b></li>
-          <li><span>Страна</span><b class="muted">[уточняется]</b></li>
           <li><span>Артикул WB</span><b>183913306</b></li>
         </ul>
         <p class="label-s pd-fish">Характеристики — рыба для концепта, сверить с оборотом пакета.</p>
@@ -129,8 +115,8 @@
     </div>
     <div class="pane" id="p-docs" role="tabpanel" hidden>
       <div class="pd-docs">
-        <figure class="doc"><div class="doc-ph">Сертификат / декларация<span class="todo">скан — от клиента</span></div><figcaption>Декларация о соответствии</figcaption></figure>
-        <figure class="doc"><div class="doc-ph">Оборот пакета<span class="todo">скан — от клиента</span></div><figcaption>Инструкция с упаковки</figcaption></figure>
+        <figure class="doc"><div class="doc-ph">Сертификат / декларация</div><figcaption>Декларация о соответствии</figcaption></figure>
+        <figure class="doc"><div class="doc-ph">Оборот пакета</div><figcaption>Инструкция с упаковки</figcaption></figure>
       </div>
     </div>
   </section>
@@ -140,16 +126,17 @@
     <div class="acts"><a class="btn btn-red btn-s" href="https://www.wildberries.ru/catalog/183913306/detail.aspx">Купить на WB</a><a class="btn btn-dark btn-s" href="#">Ozon</a><a class="btn btn-dark btn-s" href="#">Я.Маркет</a></div>
   </div>
 
-  <section class="vl1 faq-split sec" style="padding-left:0;padding-right:0">
-    <div class="sec-head" style="padding:0 var(--pad)"><h2 class="display d2">Частые вопросы</h2></div>
-    <div class="faq">
+  <section class="sec faq4">
+    <div class="pnl-head"><h2 class="display d2">Частые вопросы</h2><p>Брожение, выход, запах — коротко о главном.</p></div>
+    <div class="faq4-list">
       <details><summary>Брага встала или бродит дольше таблицы</summary><p>Чаще всего причина в температуре: ниже 18 °C дрожжи замедляются. Перенесите ёмкость в тёплое место и перемешайте брагу — брожение возобновится в течение суток. <span class="label-s">(рыба)</span></p></details>
       <details><summary>Какой выход спирта ожидать</summary><p>Из 1 кг сахара при полном сбраживании получается около 0,5 л спирта крепостью 96%. Точный выход зависит от режима и перегонки. <span class="label-s">(рыба)</span></p></details>
       <details><summary>Брага пахнет неприятно — что не так</summary><p>Резкий запах обычно появляется при перегреве выше 35 °C или нехватке сахара по таблице. Держите температуру в пределах режима. <span class="label-s">(рыба)</span></p></details>
     </div>
   </section>
 
-  <section class="vl1 sec pd-rel">
+  <section class="sec pnl-sec pd-rel">
+    <div class="pnl">
     <div class="chips-row" style="align-items:flex-end"><h2 class="display d2" style="flex:1">Другие позиции<br>Дабл Снейк</h2></div>
     <div class="cards-wrap">
       <div class="cards" id="cells">
@@ -157,45 +144,35 @@
         <div class="pcard-top"><span class="pcard-marks"><svg class="i"><use href="#i-star"/></svg></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/c3.png" alt="Пакет C3 Extra"></a>
         <div class="pcard-row"><h3><a href="c48.html">C3 Extra</a></h3><b class="pcard-num">до 18%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">100 г</a><a href="c48.html">3–5 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">100 г</a><a href="c48.html">3–5 дней</a></div>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/c100.png" alt="Пакет C100 Mega"></a>
         <div class="pcard-row"><h3><a href="c48.html">C100 Mega</a></h3><b class="pcard-num">до 16%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">360 г</a><a href="c48.html">5–7 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">360 г</a><a href="c48.html">5–7 дней</a></div>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"><svg class="i"><use href="#i-star"/></svg></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/vodka.png" alt="Пакет C★ Vodka"></a>
         <div class="pcard-row"><h3><a href="c48.html">C★ Vodka</a></h3><b class="pcard-num">до 15%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">72 г</a><a href="c48.html">4–6 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">72 г</a><a href="c48.html">4–6 дней</a></div>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zw" src="img/whisky.png" alt="Пакет Whisky Turbo"></a>
         <div class="pcard-row"><h3><a href="c48.html">Whisky Turbo</a></h3><b class="pcard-num">до 14%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">72 г</a><a href="c48.html">4–5 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">72 г</a><a href="c48.html">4–5 дней</a></div>
+      </article>
+      <article class="pcard">
+        <div class="pcard-top"><span class="pcard-marks"></span></div>
+        <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zf" src="img/fruits.png" alt="Пакет Фрукты Турбо"></a>
+        <div class="pcard-row"><h3><a href="c48.html">Фрукты Турбо</a></h3></div>
+        <div class="pcard-tags"><a href="c48.html">с ферментом глюкоамилазой</a></div>
       </article>
       </div>
     </div>
-    <p class="label-s" style="padding:12px var(--pad) 0">Крепость, сроки и вес в карточках — рыба для концепта.</p>
+    <p class="label-s" style="padding:12px var(--pad) 0">Крепость, сроки и вес в карточках — рыба для концепта.</p>    </div>
   </section>
 
 
@@ -206,23 +183,22 @@
     <span><b>до 21%</b> крепости браги</span><i aria-hidden="true"></i>
     <span><b>от 2 дней</b> брожения</span><i aria-hidden="true"></i>
     <span><b>26 л</b> на пакет</span><i aria-hidden="true"></i>
-    <span><b>23</b> позиции в 3 линейках</span><i aria-hidden="true"></i>
     <span><b>без ГМО</b></span>
   </div>
   <div class="ft-body">
     <div class="ft-l">
       <div class="ft-col">
         <div class="ft-label">Сайт</div>
-        <a href="index.html#lineup">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#original">Как отличить оригинал</a><a href="index.html#opt">Оптовикам</a><a href="index.html#about">О компании</a><a href="index.html#faq">Частые вопросы</a>
+        <a href="index.html#lineup">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#about">О компании</a><a href="index.html#faq">Частые вопросы</a><a href="index.html#contact" data-contact>Связаться</a>
       </div>
       <div class="ft-col">
         <div class="ft-label">Бренды</div>
-        <a href="index.html#lineup">Дабл Снейк</a><a href="#">Double Distill</a><a href="#">Dr. Drink</a>
+        <a href="index.html#lineup">Дабл Снейк</a><a href="index.html#brands">Double Distill</a><a href="index.html#brands">Dr. Drink</a>
       </div>
       <div class="ft-bottom ft-bottom-l"><span>© 2026 Дабл Снейк — официальный сайт бренда</span><a href="#">Политика обработки персональных данных</a></div>
     </div>
     <div class="ft-r">
-      <div class="ft-cta"><a class="ft-btn" href="index.html#opt">Запросить прайс</a><span class="ft-note">Опт и вопросы — ответим на почту</span></div>
+      <div class="ft-cta"><button class="ft-btn" type="button" data-contact>Связаться</button><span class="ft-note">Опт и вопросы — ответим на почту</span></div>
       <a class="ft-mail" href="mailto:rus-samogon@yandex.ru">rus-samogon@yandex.ru</a>
       <dl class="ft-req">
         <div><dt>Компания</dt><dd>ООО «Русс-маркет»</dd></div>
@@ -230,17 +206,30 @@
         <div><dt>ОГРН</dt><dd>1125476102982</dd></div>
         <div><dt>Город</dt><dd>Новосибирск</dd></div>
       </dl>
-      <div class="ft-bottom ft-bottom-r"><span class="todo">Телефон, адрес, соцсети — от клиента</span><span>Концепт 2 · 28.09.2026</span></div>
+      <div class="ft-bottom ft-bottom-r"><span></span><span>Концепт 2 · 28.09.2026</span></div>
     </div>
   </div>
 </footer>
 <nav class="tabbar" aria-label="Навигация">
-  <a href="index.html" class="" aria-label="Главная"><svg class="i" ><use href="#i-home"/></svg></a>
+  <a href="index.html" aria-label="Главная"><svg class="i" ><use href="#i-home"/></svg></a>
   <a href="index.html#lineup" class="on" aria-label="Продукция"><svg class="i" ><use href="#i-box"/></svg></a>
-  <a href="index.html#original" aria-label="Как отличить оригинал"><svg class="i" ><use href="#i-shield"/></svg></a>
-  <a href="index.html#opt" aria-label="Оптовикам"><svg class="i" ><use href="#i-truck"/></svg></a>
-  <a href="index.html#buy" aria-label="Где купить"><svg class="i" ><use href="#i-cart"/></svg><span class="count">3</span></a>
-</nav>
-<script src="site.js"></script>
-</body>
+  <a href="index.html#buy" aria-label="Где купить"><svg class="i" ><use href="#i-cart"/></svg></a>
+  <a href="index.html#contact" data-contact aria-label="Связаться"><svg class="i" ><use href="#i-chat"/></svg></a>
+</nav><dialog class="cdlg" id="contact-dlg" aria-labelledby="cdlg-title">
+  <button class="cdlg-x" type="button" aria-label="Закрыть" data-close><svg class="i"><use href="#i-close"/></svg></button>
+  <div class="cform">
+    <div class="cform-l">
+      <h2 class="display cform-title" id="cdlg-title">Связаться<br>с нами</h2>
+      <p class="cform-sub">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+    </div>
+    <form class="cform-f" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Заявка отправлена';">
+      <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Ваше имя"></label>
+      <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7 999 999-99-99"></label>
+      <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
+      <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
+      <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></div>
+    </form>
+  </div>
+</dialog>
+<script src="site.js"></script></body>
 </html>

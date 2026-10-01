@@ -1245,3 +1245,351 @@ footer.ft { padding: 0 !important; margin: 0; background: var(--dark); color: va
 .opt2-grid > * + *, .opt.fbi > :last-child { border-left: 0 !important; border-top: 0 !important; }
 @media (max-width: 991px) { .opt2-grid { grid-template-columns: 1fr; gap: 16px; } }
 @media (max-width: 767px) { .opt2 { margin-top: 48px; } .opt2-grid { padding: 16px; } .opt2-grid > * { padding: 28px 20px !important; } }
+
+/* ===== правки клиента 28.09 (docx «комменты Дабл снейк») ===== */
+/* шапка: лого-надпись без змеи | все пункты меню одним стилем с равным шагом | кнопка «Связаться» */
+.hd1 .hd-word { height: 40px; width: auto; }
+.hd1 .hd-nav { grid-column: span 2; gap: 36px; }
+.hd1 .hd-act { justify-content: flex-end; }
+.hd-btn { height: 40px; padding: 0 22px; font-size: 15px; }
+button.ft-btn { background: none; color: inherit; cursor: pointer; }
+@media (max-width: 1099px) {
+  .hd1 .hd-word { height: 34px; }
+}
+@media (max-width: 767px) {
+  .hd1 .hd-word { height: 30px; }
+  .hd-btn { height: 36px; padding: 0 14px; font-size: 13px; }
+}
+
+/* первый экран: логотип со змеёй вместо крупного заголовка, одна кнопка, четыре пачки, пояснение к «до 21%» */
+.h2-logo { margin: 24px 0 0; }
+.h2-logo img { height: clamp(240px, 42vh, 440px); width: auto; }
+.h2-sub { margin-top: 24px; }
+.ha-num { display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+.ha-num small { display: block; max-width: 250px; margin-top: 10px; font: 500 14px/1.35 var(--text); text-transform: none; color: #fff; opacity: .92; }
+/* веер: C48 впереди, рядом «Фрукты Турбо», за ними C3 и C100 */
+.first-screen .ha-main { height: min(58%, 35vw); translate: -80% -50%; rotate: -7deg; z-index: 4; }
+.first-screen .ha-b3 { height: min(52%, 31vw); translate: -18% -46%; rotate: 8deg; z-index: 3; }
+.first-screen .ha-b1 { height: min(38%, 23vw); translate: -122% -76%; rotate: -16deg; z-index: 1; }
+.first-screen .ha-b2 { height: min(38%, 23vw); translate: 18% -78%; rotate: 15deg; z-index: 1; }
+@media (max-width: 991px) { .first-screen .ha-main { height: 60%; } .first-screen .ha-b3 { height: 54%; } .first-screen .ha-b1, .first-screen .ha-b2 { height: 40%; } }
+@media (max-width: 767px) {
+  .h2-logo img { height: 200px; }
+  .ha-num small { font-size: 12px; max-width: 180px; }
+}
+
+/* наши бренды: заголовок над баннерами, логотипы брендов вместо текстовых названий */
+#brands.pb { margin-top: 72px; }
+.pb-head2 { padding: 56px var(--pad) 8px; text-align: center; }
+.pb-logo { display: block; height: auto; }
+.pb-logo-dd { width: min(100%, 230px); }
+.pb-logo-dr { width: min(62%, 170px); }
+/* пачка «Фрукты» снята крупнее остальных — уменьшаем до их масштаба */
+.pcard-pic img.zf { height: 80%; }
+@media (max-width: 767px) {
+  #brands.pb { margin-top: 48px; }
+  .pb-head2 { padding: 40px var(--pad) 0; }
+  .pb-logo-dd { width: 200px; }
+  .pb-logo-dr { width: 130px; }
+}
+
+/* форма «Связаться с нами»: одна общая лаконичная форма (реф клиента) — блок на главной и всплывающее окно */
+.cta-sec { padding: 40px; border-top: 1px solid var(--line); }
+.cform { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 64px 56px; background: var(--dark); color: var(--on-dark); border-radius: var(--r); }
+.cform::before { content: ''; position: absolute; z-index: -1; left: 30%; top: 40%; width: 900px; height: 900px; translate: -50% -50%; pointer-events: none; background: radial-gradient(closest-side, rgba(227, 20, 28, .38), transparent); }
+.cform-title { font-size: clamp(48px, 5.2vw, 88px); }
+.cform-sub { max-width: 420px; margin: 24px 0 0; font: 500 18px/1.4 var(--text); color: var(--on-dark); }
+.cform-f .field input { text-transform: none; font: 500 20px/1 var(--text); height: 48px; }
+.cform-btn { height: 60px; margin-top: 12px; font-size: 18px; }
+.cdlg { width: min(1120px, calc(100% - 32px)); max-width: none; max-height: calc(100% - 32px); padding: 0; border: 0; background: transparent; color: inherit; overflow: visible; }
+.cdlg::backdrop { background: rgba(0, 0, 0, .6); }
+.cdlg-x { position: absolute; z-index: 2; top: -16px; right: -16px; display: grid; place-items: center; width: 52px; height: 52px; border: 0; border-radius: 50%; background: var(--white); color: var(--ink); cursor: pointer; transition: background-color .2s ease, color .2s ease; }
+.cdlg-x:hover { background: var(--red); color: #fff; }
+@media (max-width: 991px) { .cform { grid-template-columns: 1fr; gap: 28px; padding: 44px 32px; } }
+@media (max-width: 767px) {
+  .cta-sec { padding: 16px; }
+  .cform { padding: 32px 20px; }
+  .cform-sub { font-size: 16px; margin-top: 14px; }
+  .cdlg { overflow: auto; }
+  .cdlg-x { top: 10px; right: 10px; width: 44px; height: 44px; background: rgba(255, 255, 255, .12); color: #fff; }
+}
+
+/* страница товара: одно фото без превью, логотип бренда вместо «Линейка» и бейджей */
+.pd-gal1 { grid-template-columns: minmax(0, 1fr); }
+.pd-acts-l { display: flex; align-items: center; }
+.pd-logo { width: min(100%, 220px); height: auto; }
+@media (min-width: 768px) { .pb-fan { width: 52%; right: 3%; } }
+@media (max-width: 767px) {
+  .h2-art { min-height: 440px; }
+  .first-screen .ha-pack { top: 64%; }
+  .first-screen .ha-main { height: 52%; }
+  .first-screen .ha-b3 { height: 46%; }
+  .first-screen .ha-b1, .first-screen .ha-b2 { height: 34%; }
+}
+/* ===== «Как отличить оригинал» v3 (30.09, признак от клиента): оборот пакета с точкой | где смотреть + строка «Изготовитель» ===== */
+.orig1 .orig-pic { min-height: 600px; }
+.ob-pack { position: relative; display: block; width: min(86%, 520px); aspect-ratio: 1; }
+.ob-pack img { position: static; width: 100%; height: 100%; max-height: none; transform: none; filter: drop-shadow(0 24px 30px rgba(0, 0, 0, .22)); }
+.ob-pack .hot { animation: ob-pulse 2s ease-in-out infinite; }
+@keyframes ob-pulse { 50% { box-shadow: 0 0 0 14px rgba(227, 20, 28, .12); } }
+@media (prefers-reduced-motion: reduce) { .ob-pack .hot { animation: none; } }
+.ob-text { display: flex; flex-direction: column; justify-content: center; gap: 20px; padding: 40px var(--pad); }
+.ob-kicker { color: var(--ink-2); }
+.ob-mark { display: flex; gap: 16px; align-items: flex-start; padding: 22px 24px; background: var(--bg); border-left: 4px solid var(--red); border-radius: var(--r); font: 600 clamp(17px, 1.4vw, 21px)/1.35 var(--cond); }
+.ob-mark .hr-n { background: var(--red); width: 32px; height: 32px; }
+.ob-warn { display: flex; gap: 14px; align-items: flex-start; max-width: 520px; font: 500 15px/1.4 var(--text); color: var(--ink-2); }
+.ob-warn b { display: block; margin-bottom: 4px; font: 800 20px/1.1 var(--display); text-transform: uppercase; color: var(--red); }
+.ob-warn svg.i { color: var(--red); margin-top: 0; }
+.ob-buy { align-self: flex-start; margin-top: 8px; }
+@media (max-width: 767px) {
+  .orig1 .orig-pic { min-height: 0; aspect-ratio: 1; }
+  .ob-pack { width: 92%; }
+  .ob-text { padding: 8px var(--pad) 32px; gap: 16px; }
+  .ob-mark { padding: 16px; gap: 12px; }
+}
+/* ===== «О бренде» v2 (01.10): второй блок, лид крупно + ячейки с цифрами по линиям сетки, как «Срок зависит от температуры» ===== */
+.ab-head { display: grid; grid-template-columns: 1fr 1fr; align-items: start; padding: 0 var(--pad) 48px; }
+.ab-head h2 { padding-right: var(--pad); }
+.ab-lead { margin: 0; font: 600 clamp(22px, 2vw, 30px)/1.3 var(--text); }
+.ab-sub { margin: 18px 0 0; max-width: 560px; font: 400 16px/1.5 var(--text); color: var(--ink-2); }
+.ab-grid { border-bottom: 1px solid var(--line); }
+.ab-grid > :nth-child(-n+4) { border-bottom: 1px solid var(--line); }
+.ab-num { min-height: 300px; }
+.ab-num .hg-meta { padding-top: 0; font: 600 13px/1.2 var(--cond); text-transform: uppercase; letter-spacing: .02em; }
+.ab-num .hg-big { margin-top: auto; padding-top: 28px; }
+.ab-num .hg-big small { margin-left: 4px; }
+.ab-txt { min-height: 190px; justify-content: flex-end; gap: 10px; }
+.ab-txt b { font: 900 clamp(22px, 2vw, 28px)/1 var(--display); text-transform: uppercase; }
+.ab-txt span { font: 500 14px/1.45 var(--text); color: var(--ink-2); max-width: 280px; }
+@media (max-width: 767px) {
+  .ab-head { grid-template-columns: 1fr; gap: 16px; padding-bottom: 28px; }
+  .ab-lead { font-size: 20px; }
+  .ab-num { min-height: 210px; }
+  .ab-num .hg-big { font-size: 60px; }
+  .ab-txt { min-height: 160px; }
+  .ab-txt b { font-size: 20px; }
+  .ab-txt span { font-size: 13px; }
+  .ab-grid > :nth-last-child(-n+2) { border-bottom: 0; }
+}
+.ab-num .hg-title { min-height: 2.4em; }
+.ab-txt b { min-height: 1em; }
+.ab-txt { justify-content: flex-start; min-height: 0; padding-top: 36px; padding-bottom: 36px; }
+@media (max-width: 767px) { .ab-num .hg-title { min-height: 3.6em; } .ab-txt { padding-top: 24px; padding-bottom: 24px; } }
+/* ===================== по рефу Beanro (01.10) ===================== */
+/* фон страницы серый, белые — шапка и панели; линии темнее, чтобы читались на сером */
+:root { --page: #ececec; --line: #d6d6d6; --pnl-r: 20px; }
+body { background: var(--page); }
+main { background: transparent; }
+
+/* шапка: ссылки слева · логотип по центру · кнопка справа, содержимое в контейнере 1440 */
+.hd4 { background: var(--white); }
+.hd4-in { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; max-width: var(--wrap, 1440px); height: 80px; margin: 0 auto; padding: 0 var(--pad); }
+.hd4-nav { display: flex; gap: 32px; }
+.hd4-nav a { position: relative; font: 800 16px/1 var(--display); text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; transition: color .2s ease; }
+.hd4-nav a:hover { color: var(--red); }
+.hd4-nav a.on::after { content: ''; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--ink); }
+.hd4-logo img { height: 46px; width: auto; }
+.hd4-act { justify-self: end; }
+.hd4 .hd-btn { height: 46px; padding: 0 26px; font-size: 15px; }
+html { scroll-padding-top: 81px; }
+@media (max-width: 1099px) {
+  .hd4-in { grid-template-columns: 1fr auto; height: 64px; }
+  .hd4-nav { display: none; }
+  .hd4-logo { justify-self: start; }
+  .hd4-logo img { height: 36px; }
+  .hd4 .hd-btn { height: 40px; padding: 0 18px; font-size: 14px; }
+  html { scroll-padding-top: 65px; }
+}
+
+/* первый экран: оффер по центру, под ним логотип со змеёй на красных лучах, по углам — пачка и «до 21%» */
+.hero4 { position: relative; isolation: isolate; display: flex; flex-direction: column; align-items: center; max-width: var(--wrap, 1440px); min-height: calc(100vh - 80px); min-height: calc(100svh - 80px); margin: 0 auto; padding: 48px var(--pad) 40px; text-align: center; overflow: hidden; }
+.h4-offer { font-size: clamp(64px, 8.4vw, 136px); line-height: .86; }
+.h4-center { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; width: 100%; padding: 28px 0 8px; }
+.h4-rays { position: absolute; z-index: -1; left: 50%; top: 46%; width: min(1100px, 120vw); aspect-ratio: 1; translate: -50% -50%; border-radius: 50%; pointer-events: none;
+  background: repeating-conic-gradient(from 0deg, rgba(227, 20, 28, .13) 0deg 7deg, transparent 7deg 15deg);
+  -webkit-mask: radial-gradient(closest-side, #000 18%, transparent 72%); mask: radial-gradient(closest-side, #000 18%, transparent 72%);
+  animation: ha-spin 120s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .h4-rays { animation: none; } }
+.h4-logo { height: clamp(220px, 36vh, 390px); width: auto; }
+.h4-cta { height: 56px; padding: 0 40px; font-size: 16px; }
+.h4-card { position: absolute; bottom: 40px; z-index: 2; width: 250px; }
+.h4-left { left: var(--pad); display: flex; flex-direction: column; align-items: flex-start; gap: 12px; text-align: left; }
+.h4-packs { position: relative; display: block; width: 190px; height: 150px; }
+.h4-packs img { position: absolute; bottom: 0; height: 132px; width: auto; filter: drop-shadow(0 14px 18px rgba(0, 0, 0, .22)); transition: transform .4s cubic-bezier(.2, .7, .2, 1); }
+.h4-packs img:first-child { left: 64px; rotate: 10deg; height: 116px; }
+.h4-packs img:last-child { left: 0; rotate: -8deg; }
+.h4-left:hover .h4-packs img:last-child { transform: translateY(-6px) rotate(-3deg); }
+.h4-left:hover .h4-cap { color: var(--red); }
+.h4-cap { font: 800 18px/1.1 var(--display); text-transform: uppercase; transition: color .2s ease; }
+.h4-right { right: var(--pad); text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.h4-num { font: 900 64px/.85 var(--display); text-transform: uppercase; color: var(--red); }
+.h4-right .h4-cap { font: 500 14px/1.4 var(--text); text-transform: none; color: var(--ink-2); max-width: 230px; }
+@media (max-width: 1099px) {
+  .hero4 { min-height: 0; }
+  .h4-card { position: static; width: auto; }
+  .hero4 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; align-items: end; }
+  .h4-offer, .h4-center { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .hero4 { padding: 32px var(--pad) 28px; }
+  .h4-offer { font-size: 50px; }
+  .h4-logo { height: 220px; }
+  .h4-cta { width: 100%; }
+  .h4-packs { width: 140px; height: 110px; }
+  .h4-packs img { height: 96px; }
+  .h4-packs img:first-child { left: 46px; height: 86px; }
+  .h4-cap { font-size: 15px; }
+  .h4-num { font-size: 44px; }
+  .h4-right .h4-cap { font-size: 12px; }
+}
+
+/* белые панели на сером фоне: «Продукция», «Другие позиции» (реф — product-layout Beanro) */
+.pnl-sec { padding: 72px var(--pad) 0; }
+.pnl { background: var(--white); border-radius: var(--pnl-r); padding: 56px 48px 48px; }
+.pnl-head { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 24px; margin-bottom: 40px; }
+.pnl-head p { justify-self: end; max-width: 340px; margin: 0; font: 500 16px/1.45 var(--text); color: var(--ink-2); }
+.pnl .cards-wrap, .pnl .cards { padding-left: 0; padding-right: 0; }
+.pnl .chips-row { padding: 0 0 32px; }
+.pnl-note, .pnl > p.label-s { padding: 16px 0 0 !important; margin: 0; text-align: left; }
+@media (max-width: 767px) {
+  .pnl-sec { padding: 48px 12px 0; }
+  .pnl { padding: 32px 16px 24px; }
+  .pnl-head { grid-template-columns: 1fr; margin-bottom: 24px; }
+  .pnl-head p { justify-self: start; font-size: 14px; }
+}
+
+/* частые вопросы: заголовок слева, пояснение справа, вопросы — белые плашки (реф — faq Beanro) */
+.faq4 .pnl-head { padding: 0; }
+.faq4-list { display: grid; gap: 12px; }
+.faq4-list details { background: var(--white); border-radius: var(--pnl-r); transition: box-shadow .2s ease; }
+.faq4-list details:hover { box-shadow: inset 0 0 0 1px var(--ink); }
+.faq4-list summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 32px 40px; font: 800 clamp(20px, 1.8vw, 28px)/1.1 var(--display); text-transform: uppercase; }
+.faq4-list summary::-webkit-details-marker { display: none; }
+.faq4-list summary::after { content: ''; flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E") center / 20px no-repeat; transition: transform .25s ease, background-color .2s ease; }
+.faq4-list details[open] summary::after { transform: rotate(45deg); background-color: var(--ink); }
+.faq4-list details p { margin: 0; padding: 0 40px 32px; max-width: 780px; font: 400 17px/1.5 var(--text); color: var(--ink-2); }
+#faq.faq4, .faq4 { padding-bottom: 72px; }
+@media (max-width: 767px) {
+  .faq4-list { gap: 8px; }
+  .faq4-list summary { padding: 20px; font-size: 18px; }
+  .faq4-list summary::after { width: 32px; height: 32px; background-size: 16px; }
+  .faq4-list details p { padding: 0 20px 22px; font-size: 15px; }
+}
+
+/* баннер-печать в «Оригинале» (реф — chill-box Beanro): тёмная плашка, огромная фраза, повёрнутая красная печать, стикеры */
+.orig-sec { padding-bottom: 0; }
+.sban { position: relative; isolation: isolate; overflow: hidden; margin-bottom: 24px; padding: 104px 40px 80px; background: var(--dark); color: #fff; border-radius: var(--pnl-r); text-align: center; }
+.sban::before { content: ''; position: absolute; z-index: -1; left: 50%; top: 50%; width: 1200px; height: 1200px; translate: -50% -50%; pointer-events: none; background: radial-gradient(closest-side, rgba(227, 20, 28, .32), transparent 70%); }
+.sb-title { display: flex; flex-direction: column; align-items: center; font-size: clamp(54px, 7vw, 116px); line-height: .92; }
+.sb-stamp { position: relative; z-index: 2; display: inline-block; margin: -.06em 0 -.04em; padding: .02em .32em .06em; background: var(--red); color: #fff; border-radius: 14px; rotate: -4deg; font-size: 1.12em; box-shadow: 0 18px 40px rgba(0, 0, 0, .45), inset 0 0 0 4px rgba(255, 255, 255, .18); }
+.sb-pill { position: absolute; z-index: 3; padding: 10px 18px; border-radius: 100px; font: 600 16px/1.2 var(--text); white-space: nowrap; }
+.sb-p1 { left: 9%; top: 23%; background: var(--yellow); color: var(--ink); rotate: -7deg; }
+.sb-p2 { right: 12%; top: 19%; background: #fff; color: var(--ink); rotate: 8deg; }
+.sb-p3 { left: 11%; top: 60%; background: var(--red); color: #fff; rotate: 6deg; }
+.sb-p4 { right: 9%; top: 57%; background: #2f2f2f; color: #fff; rotate: -6deg; box-shadow: inset 0 0 0 1px #555; }
+.sb-text { max-width: 480px; margin: 40px auto 0; font: 500 18px/1.45 var(--text); color: #cfcfcf; }
+.orig1 { border-top: 0; gap: 24px; }
+.orig1 .orig-pic { margin: 0; background: var(--white); border-radius: var(--pnl-r); }
+.ob-text { background: var(--white); border-radius: var(--pnl-r); padding: 48px; }
+.ob-mark { background: var(--page); }
+@media (max-width: 991px) {
+  .sb-pill { position: static; display: inline-block; margin: 6px 4px 0; }
+  .sban { padding: 56px 20px 40px; }
+  .sb-title { margin-bottom: 20px; }
+}
+@media (max-width: 767px) {
+  .sb-title { font-size: 44px; }
+  .sb-stamp { border-radius: 10px; }
+  .sb-pill { font-size: 13px; padding: 8px 14px; }
+  .sb-text { font-size: 15px; margin-top: 24px; }
+  .orig1 { gap: 12px; }
+  .ob-text { padding: 24px 20px; }
+}
+
+/* карточки, которые были серыми на белом, — белые на сером */
+.buy2-card, .buy2-card:hover { background: var(--white); }
+.pd-stage { background: var(--white); }
+.ab-grid, .how-grid { background: transparent; }
+/* правки 01.10: печать не заходит на строки, стикеры — у краёв строк, единое скругление панелей */
+.sb-stamp { margin: .06em 0 .1em; }
+.sb-p1 { left: 7%; top: 22%; }
+.sb-p2 { right: 9%; top: 20%; }
+.sb-p3 { left: 8%; top: auto; bottom: 25%; }
+.sb-p4 { right: 8%; top: auto; bottom: 27%; }
+@media (max-width: 991px) { .sb-p3, .sb-p4 { bottom: auto; } }
+.pb-card, .cform, .buy2-card, .pcard { border-radius: var(--pnl-r); }
+.cta-sec { border-top: 0; padding-top: 0; }
+/* первый экран, правая карточка — «Где купить» */
+.h4-right { gap: 10px; }
+.h4-mps { display: flex; gap: 6px; }
+.h4-mps i { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: #fff; font: 900 17px/1 var(--display); font-style: normal; }
+.h4-buy { display: inline-flex; align-items: center; gap: 6px; font: 900 34px/1 var(--display); text-transform: uppercase; transition: color .2s ease; }
+.h4-buy svg.i { width: 26px; height: 26px; }
+.h4-right:hover .h4-buy { color: var(--red); }
+.h4-right .h4-cap { font: 500 14px/1.4 var(--text); text-transform: none; color: var(--ink-2); }
+@media (max-width: 767px) { .h4-buy { font-size: 24px; } .h4-mps i { width: 32px; height: 32px; font-size: 14px; } }
+.h4-offer .red { white-space: nowrap; }
+@media (max-width: 767px) { .h4-offer { font-size: 44px; } }
+/* ===== 01.10: вертикальные линии на всей странице + без скруглений ===== */
+/* линии сетки: 25 / 50 / 75 % контейнера 1440, закреплены на всю высоту, под контентом — белые панели их перекрывают (как у Beanro) */
+body::before { content: ''; position: fixed; top: 0; bottom: 0; left: var(--side, 0px); right: var(--side, 0px); z-index: -1; pointer-events: none;
+  background: linear-gradient(var(--line), var(--line)) 25% 0 / 1px 100% no-repeat, linear-gradient(var(--line), var(--line)) 50% 0 / 1px 100% no-repeat, linear-gradient(var(--line), var(--line)) 75% 0 / 1px 100% no-repeat; }
+@media (max-width: 767px) { body::before { display: none; } }
+/* скругления убраны у всех элементов; круги (номера, точки, «+», маркер на обороте) остаются кругами */
+:root { --r: 0px; --pnl-r: 0px; }
+*, *::before, *::after { border-radius: 0 !important; }
+.cdlg-x, .faq4-list summary::after, .ft-adv i, .h4-mps i, .h4-rays, .hg-ava, .hot, .hr-n, .tabbar a, .pb-red::before { border-radius: 50% !important; }
+/* ===== «О бренде» v3 (реф Beanro): без заголовка; утверждение огромным капсом со встроенными пачками, абзац, карточки по линиям сетки ===== */
+.about3 { padding: 112px 0 0; text-align: center; }
+.ab3-say { max-width: 1240px; margin: 0 auto; padding: 0 var(--pad); font-size: clamp(38px, 4.6vw, 72px); line-height: 1.02; }
+.ab3-img { display: inline-block; width: 1.05em; height: .9em; vertical-align: -.1em; margin: 0 .06em; position: relative; }
+.ab3-img img { position: absolute; left: 50%; top: 50%; height: 1.5em; width: auto; translate: -50% -52%; rotate: -10deg; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .2)); }
+.ab3-img2 img { rotate: 9deg; }
+.ab3-sub { max-width: 620px; margin: 40px auto 0; padding: 0 var(--pad); font: 500 18px/1.5 var(--text); color: var(--ink-2); }
+/* карточки: поля 12 px + зазор 24 px — середины зазоров ровно на линиях сетки 25 / 50 / 75 % */
+.ab3-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 56px 24px; padding: 104px 12px 0; text-align: left; }
+.ab3-card { position: relative; display: flex; flex-direction: column; gap: 14px; min-height: 280px; padding: 72px 32px 32px; background: var(--white); }
+.ab3-card b { font: 900 clamp(24px, 2vw, 30px)/1 var(--display); text-transform: uppercase; }
+.ab3-card > span:last-child { margin-top: auto; font: 500 15px/1.5 var(--text); color: var(--ink-2); }
+.ab3-seal { position: absolute; left: -12px; top: -30px; display: grid; place-items: center; width: 84px; height: 84px; background: var(--red); color: #fff; font: 900 30px/1 var(--display);
+  clip-path: polygon(50% 0%, 55.6% 7.4%, 62.9% 1.7%, 66.5% 10.3%, 75% 6.7%, 76.2% 15.9%, 85.4% 14.6%, 84.1% 23.8%, 93.3% 25%, 89.7% 33.5%, 98.3% 37.1%, 92.6% 44.4%, 100% 50%, 92.6% 55.6%, 98.3% 62.9%, 89.7% 66.5%, 93.3% 75%, 84.1% 76.2%, 85.4% 85.4%, 76.2% 84.1%, 75% 93.3%, 66.5% 89.7%, 62.9% 98.3%, 55.6% 92.6%, 50% 100%, 44.4% 92.6%, 37.1% 98.3%, 33.5% 89.7%, 25% 93.3%, 23.8% 84.1%, 14.6% 85.4%, 15.9% 76.2%, 6.7% 75%, 10.3% 66.5%, 1.7% 62.9%, 7.4% 55.6%, 0% 50%, 7.4% 44.4%, 1.7% 37.1%, 10.3% 33.5%, 6.7% 25%, 15.9% 23.8%, 14.6% 14.6%, 23.8% 15.9%, 25% 6.7%, 33.5% 10.3%, 37.1% 1.7%, 44.4% 7.4%); }
+.ab3-more { justify-content: space-between; background: var(--dark); color: #fff; transition: background-color .2s ease; }
+.ab3-more:hover { background: var(--red); }
+.ab3-more svg.i { width: 44px; height: 44px; align-self: flex-end; }
+@media (max-width: 1099px) { .ab3-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) {
+  .about3 { padding-top: 64px; }
+  .ab3-say { font-size: 32px; }
+  .ab3-sub { font-size: 15px; margin-top: 24px; }
+  .ab3-grid { grid-template-columns: 1fr; gap: 40px; padding: 64px 16px 0; }
+  .ab3-card { min-height: 0; padding: 56px 20px 24px; }
+  .ab3-seal { left: 12px; width: 68px; height: 68px; font-size: 24px; top: -26px; }
+  .ab3-more { min-height: 120px; }
+}
+
+/* ===== 01.10: все блоки — в контейнере 1440 (решение пользователя); снаружи только фон страницы и линии сетки. Шапка и подвал: фон во всю ширину, содержимое — 1440 ===== */
+@media (min-width: 1441px) {
+  main > * { max-width: var(--wrap); margin-left: auto; margin-right: auto; }
+  main { --side: 0px; }
+}
+/* единый край внутри контейнера — поле var(--pad) */
+.pb-grid { padding: 40px var(--pad); }
+.cta-sec { padding-left: var(--pad); padding-right: var(--pad); }
+@media (max-width: 767px) { .pb-grid { padding: 16px var(--pad); } .cta-sec { padding: 0 var(--pad) 16px; } }
+/* «Где купить»: поля 12 + зазор 24 — середины зазоров на линиях сетки 25/50/75 % (как карточки «О бренде») */
+.buy2-grid { gap: 24px; padding: 0 12px; }
+@media (max-width: 991px) { .buy2-grid { gap: 24px; padding: 0 12px; } }
+@media (max-width: 767px) { .buy2-grid { gap: 10px; padding: 0 var(--pad); } }
+.faq4 .pnl-head h2 { white-space: nowrap; }
+@media (max-width: 767px) { .faq4 .pnl-head h2 { white-space: normal; } }
+/* «Срок зависит от температуры» v3 (макет пользователя 01.10): заголовок в строку + пояснение справа, вся лента — белая панель, тёмная плашка внизу панели */
+.how2-head { padding: 0 var(--pad); }
+.how2-head h2 { white-space: nowrap; }
+.how2-pnl { background: var(--white); }
+.how2-pnl .how-row { padding-left: var(--pad); padding-right: var(--pad); }
+.how2-pnl .how-row:first-child { border-top: 0; }
+.how2-pnl .note { margin: 0; padding-left: var(--pad); }
+@media (max-width: 767px) { .how2-head h2 { white-space: normal; } .how2-head { padding: 0; } }
+.how2-pnl .how-grid > * { border-right: 1px solid var(--line); }
+.how2-pnl .how-grid > :nth-child(4n) { border-right: 0; }
+@media (max-width: 767px) { .how2-pnl .how-grid > :nth-child(even) { border-right: 0; } .how2-pnl .steps-grid > * { border-right: 0 !important; } }

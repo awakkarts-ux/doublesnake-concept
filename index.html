@@ -23,132 +23,121 @@
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
   <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5 5 19"/></symbol>
 </svg>
-<header class="hd hd1">
-  <a class="hd-cell hd-brand" href="index.html" aria-label="Дабл Снейк — на главную"><span class="hd-logo" aria-hidden="true"></span><b>Дабл Снейк</b></a>
-  <nav class="hd-cell hd-main" aria-label="Продукция и покупка"><a href="index.html#lineup">Продукция<sup>23</sup></a><a href="index.html#buy">Где купить<sup>3</sup></a></nav>
-  <nav class="hd-cell hd-main" aria-label="Оригинал и опт"><a href="index.html#original">Оригинал</a><a href="index.html#opt" class="hd-opt">Оптовикам</a></nav>
-  <nav class="hd-cell hd-links" aria-label="О бренде"><a href="index.html#about">О компании</a><a href="index.html#faq">FAQ</a><a href="#contacts">Контакты</a></nav>
+<header class="hd hd4">
+  <div class="hd4-in">
+    <nav class="hd4-nav" aria-label="Разделы"><a href="index.html#lineup">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#about">О компании</a><a href="index.html#faq">FAQ</a><a href="#contacts">Контакты</a></nav>
+    <a class="hd4-logo" href="index.html" aria-label="Дабл Снейк — на главную"><img src="img/logo-word.png" alt="Дабл Снейк"></a>
+    <div class="hd4-act"><button class="btn btn-red hd-btn" type="button" data-contact>Связаться</button></div>
+  </div>
 </header>
 <div class="app">
 <main>
 
-  <!-- hero: первый экран бренда -->
-  <div class="first-screen">
-  <section class="hero2">
-    <div class="h2-text">
-      <div class="label h2-kicker">Официальный сайт бренда</div>
-      <h1 class="display h2-title rv">Турбо-<br>дрожжи<br><span class="red">Дабл Снейк</span></h1>
-      <p class="h2-sub">Спиртовые турбо-дрожжи для браги до 21%. Три линейки, 23 позиции — под разные сроки и сырьё.</p>
-      <div class="h2-cta">
-        <a class="btn btn-red" href="#buy">Где купить оригинал</a>
-        <a class="btn btn-out" href="#opt">Оптовикам</a>
-      </div>
+  <!-- первый экран v4 (реф Beanro): оффер по центру огромно, под ним логотип со змеёй на лучах, по углам — карточка пачки и «до 21%» -->
+  <section class="hero4">
+    <h1 class="display h4-offer rv">Турбо-дрожжи<br>для браги <span class="red">до 21%</span></h1>
+    <div class="h4-center">
+      <span class="h4-rays" aria-hidden="true"></span>
+      <img class="h4-logo" src="img/logo-snake-red.png" alt="Дабл Снейк">
+      <button class="btn btn-red h4-cta" type="button" data-contact>Связаться</button>
     </div>
-    <div class="h2-art" aria-hidden="true">
-      <img class="ha-pack ha-b1" src="img/c3-cut.png" alt="">
-      <img class="ha-pack ha-b2" src="img/c100-cut.png" alt="">
-      <img class="ha-pack ha-main" src="img/c48-cut.png" alt="">
-      <span class="tag yellow ha-flag">Флагман — C48 Extreme</span>
-      <span class="ha-num">до 21%</span>
+    <a class="h4-card h4-left" href="c48.html">
+      <span class="h4-packs" aria-hidden="true"><img src="img/fruits-cut.png" alt=""><img src="img/c48-cut.png" alt=""></span>
+      <span class="h4-cap">Флагман —<br>C48 Extreme</span>
+    </a>
+    <a class="h4-card h4-right" href="#buy">
+      <span class="h4-mps" aria-hidden="true"><i style="background:#a73afd">W</i><i style="background:#005bff">O</i><i style="background:#fc0;color:#111">Я</i></span>
+      <b class="h4-buy">Где купить <svg class="i"><use href="#i-arrow"/></svg></b>
+      <span class="h4-cap">Wildberries · Ozon · Яндекс Маркет</span>
+    </a>
+  </section>
+  <!-- о бренде v3 (реф Beanro, about + premium): огромное утверждение со встроенными пачками, абзац, 7 преимуществ карточками с номером-печатью -->
+  <section class="sec c about3" id="about">
+    <p class="display ab3-say rv"><span class="red">«Double Snake»</span> — бренд спиртовых турбо-дрожжей <span class="ab3-img" aria-hidden="true"><img src="img/c48-cut.png" alt=""></span> который пользуется большой популярностью у&nbsp;винокуров <span class="ab3-img ab3-img2" aria-hidden="true"><img src="img/fruits-cut.png" alt=""></span> благодаря высокой скорости брожения и&nbsp;качеству конечного продукта</p>
+    <p class="ab3-sub">Формулы объединяют специально подобранные дрожжи и комплекс питательных веществ. В линейке — продукты с различными сроками сбраживания: от быстрых решений до составов для браги повышенной крепости.</p>
+    <div class="ab3-grid">
+      <div class="ab3-card"><span class="ab3-seal">01</span><b>Скорость и крепость</b><span>Быстро получить брагу или достичь максимальной спиртуозности 21%.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">02</span><b>Универсальность</b><span>Сахар, декстроза, зерновые солодовые экстракты, меласса.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">03</span><b>Органолептика</b><span>Чистый нейтральный аромат, брага быстро осветляется и не пенится.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">04</span><b>Выход</b><span>Максимальный выход чистого спирта.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">05</span><b>Без ГМО</b><span>Безопасный состав.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">06</span><b>Без разбраживания</b><span>Можно сразу вносить в сусло.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">07</span><b>Защита браги</b><span>Подавляют постороннюю микрофлору, снижают риск заражения.</span></div>
+      <a class="ab3-card ab3-more" href="#lineup"><b>Вся продукция</b><svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
   </section>
-  <!-- полоса доверия -->
-  <div class="trust trust-fw">
-    <a class="t-cell" href="#" title="Карточка на Ozon"><b class="t-num">4,9</b><span>44 677 оценок на Ozon <svg class="i"><use href="#i-arrow"/></svg></span></a>
-    <div class="t-cell"><b class="t-num">2013</b><span>бренд на рынке</span></div>
-    <div class="t-cell"><b class="t-num">23</b><span>позиции в трёх линейках</span></div>
-    <a class="t-cell t-orig" href="#original"><svg class="i"><use href="#i-shield"/></svg><span><b>Проверьте пачку</b>как отличить оригинал</span></a>
-  </div>  </div>
-
-  <p class="todo c" style="padding:8px var(--pad) 0;margin-top:0;margin-bottom:0">Рейтинг — карточка реселлера «Дрожжи Шоп», год — со слов клиента: утвердить</p>
-
   <!-- линейка -->
-  <section id="lineup" class="sec c lineup-c" style="padding-left:0;padding-right:0">
-    <div class="sec-head" style="padding:0 var(--pad)"><h2 class="display d2 rv">Продукция</h2><span class="label-s">Главный бренд — Дабл Снейк. Нажмите на пачку, чтобы открыть режимы и характеристики.</span></div>
-    <div class="chips-row" role="tablist" aria-label="Бренды">
-      <button class="chip-tab on" role="tab" aria-selected="true">Дабл Снейк <span class="count">5</span></button>
-      <button class="chip-tab" role="tab" aria-selected="false">Double Distill <span class="count">9</span></button>
-      <button class="chip-tab" role="tab" aria-selected="false">Dr. Drink <span class="count">9</span></button>
-    </div>
+  <section id="lineup" class="sec c pnl-sec">
+    <div class="pnl">
+    <div class="pnl-head"><h2 class="display d2 rv">Продукция</h2><p>Нажмите на пачку, чтобы открыть режимы и характеристики.</p></div>
     <div class="cards-wrap">
       <div class="cards" id="cells">
       <article class="pcard on">
         <div class="pcard-top"><span class="pcard-marks"><svg class="i"><use href="#i-star"/></svg><svg class="i"><use href="#i-flame"/></svg></span><span class="tag yellow">Флагман</span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/c48.png" alt="Пакет C48 Extreme"></a>
         <div class="pcard-row"><h3><a href="c48.html">C48 Extreme</a></h3><b class="pcard-num">до 21%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">130 г</a><a href="c48.html">2–10 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="https://www.wildberries.ru/catalog/183913306/detail.aspx" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="https://www.wildberries.ru/catalog/183913306/detail.aspx">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">130 г</a><a href="c48.html">2–10 дней</a></div>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"><svg class="i"><use href="#i-star"/></svg></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/c3.png" alt="Пакет C3 Extra"></a>
         <div class="pcard-row"><h3><a href="c48.html">C3 Extra</a></h3><b class="pcard-num">до 18%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">100 г</a><a href="c48.html">3–5 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">100 г</a><a href="c48.html">3–5 дней</a></div>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/c100.png" alt="Пакет C100 Mega"></a>
         <div class="pcard-row"><h3><a href="c48.html">C100 Mega</a></h3><b class="pcard-num">до 16%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">360 г</a><a href="c48.html">5–7 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">360 г</a><a href="c48.html">5–7 дней</a></div>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"><svg class="i"><use href="#i-star"/></svg></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/vodka.png" alt="Пакет C★ Vodka"></a>
         <div class="pcard-row"><h3><a href="c48.html">C★ Vodka</a></h3><b class="pcard-num">до 15%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">72 г</a><a href="c48.html">4–6 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">72 г</a><a href="c48.html">4–6 дней</a></div>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zw" src="img/whisky.png" alt="Пакет Whisky Turbo"></a>
         <div class="pcard-row"><h3><a href="c48.html">Whisky Turbo</a></h3><b class="pcard-num">до 14%</b></div>
-        <div class="pcard-tags"><a href="index.html#lineup">Дабл Снейк</a><a href="c48.html">72 г</a><a href="c48.html">4–5 дней</a></div>
-        <div class="pcard-buy">
-          <div class="mp-sw" role="group" aria-label="Маркетплейс"><button type="button" aria-pressed="true" data-href="#" data-mp="WB">WB</button><button type="button" aria-pressed="false" data-href="#" data-mp="Ozon">Ozon</button><button type="button" aria-pressed="false" data-href="#" data-mp="ЯМ">ЯМ</button></div>
-          <a class="btn btn-red" href="#">Купить на WB</a>
-        </div>
+        <div class="pcard-tags"><a href="c48.html">72 г</a><a href="c48.html">4–5 дней</a></div>
+      </article>
+      <article class="pcard">
+        <div class="pcard-top"><span class="pcard-marks"></span></div>
+        <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zf" src="img/fruits.png" alt="Пакет Фрукты Турбо"></a>
+        <div class="pcard-row"><h3><a href="c48.html">Фрукты Турбо</a></h3></div>
+        <div class="pcard-tags"><a href="c48.html">с ферментом глюкоамилазой</a></div>
       </article>
       </div>
     </div>
-    <p class="label-s" style="padding:12px var(--pad) 0;margin:0">Граммовка, сроки и крепость у всех позиций кроме C48 — рыба для концепта. Все карточки ведут на шаблон страницы C48.</p>
+    <p class="label-s pnl-note">Граммовка, сроки и крепость у всех позиций кроме C48 — рыба для концепта. Все карточки ведут на шаблон страницы C48.</p>
+    </div>
   </section>
 
-  <!-- промо-баннеры: в контейнере, по линиям сетки (реф — блок услуг «Первой лаборатории») -->
-  <section class="sec pb" style="padding-left:0;padding-right:0">
+  <!-- наши бренды: баннеры Double Distill и Dr. Drink с логотипами из исходников упаковки -->
+  <section class="sec pb" id="brands" style="padding-left:0;padding-right:0">
+    <div class="pb-head2"><h2 class="display d2 rv">Наши бренды</h2></div>
     <div class="pb-grid">
-      <a class="pb-card pb-dark pb-dd" href="#lineup">
-        <span class="pb-label">9 позиций</span>
+      <a class="pb-card pb-dark pb-dd" href="#brands">
         <span class="pb-arrow" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
         <span class="pb-fan" aria-hidden="true"><img class="f1" src="img/dd-fruits-cut.png" alt=""><img class="f2" src="img/dd-carbon-cut.png" alt=""><img class="f3" src="img/dd-whiskey-cut.png" alt=""></span>
-        <span class="pb-text"><span class="display pb-title">Double<br>Distill</span><span class="pb-cap">Vodka · Fruits · Rum · Whiskey · T3 · T24 · T48 · Carbon · XXL <span class="pb-todo">[строка «для чего» — от клиента]</span></span></span>
+        <span class="pb-text"><img class="pb-logo pb-logo-dd" src="img/brand-dd.png" alt="Double Distill"><span class="pb-cap">Vodka · Fruits · Rum · Whiskey · T3 · T24 · T48 · Carbon · XXL</span></span>
       </a>
-      <a class="pb-card pb-paper pb-dr" href="#lineup">
-        <span class="pb-label">9 позиций</span>
+      <a class="pb-card pb-paper pb-dr" href="#brands">
         <span class="pb-arrow" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
         <span class="pb-fan" aria-hidden="true"><img class="f1" src="img/dr-t3-cut.png" alt=""><img class="f2" src="img/dr-rum-cut.png" alt=""><img class="f3" src="img/dr-vodka-cut.png" alt=""></span>
-        <span class="pb-text"><span class="display pb-title">Dr.<br>Drink</span><span class="pb-cap">Fruit · Whiskey · Rum · Vodka · T3 · T24 · T48 · Carbon · Big Pack <span class="pb-todo">[строка «для чего» — от клиента]</span></span></span>
+        <span class="pb-text"><img class="pb-logo pb-logo-dr" src="img/brand-dr.png" alt="Dr. Drink"><span class="pb-cap">Fruit · Whiskey · Rum · Vodka · T3 · T24 · T48 · Carbon · Big Pack</span></span>
       </a>
     </div>
   </section>
 
   <!-- как пользоваться: режимы C48 -->
-  <section class="vl1 vl-fb sec" style="padding-left:0;padding-right:0" id="how">
-    <div class="sec-head c" style="padding:0 var(--pad)"><h2 class="display d2 rv">Срок зависит<br>от температуры</h2><span class="label-s">Выберите крепость — шаги ниже пересчитаются под неё. Режимы C48 с оборота пакета, на 26 литров.</span></div>
+  <section class="sec c how2" id="how">
+    <div class="pnl-head how2-head"><h2 class="display d2 rv">Срок зависит от температуры</h2><p>Выберите крепость — шаги ниже пересчитаются под неё. Режимы C48 с оборота пакета, на 26 литров.</p></div>
+    <div class="how2-pnl">
     <div class="how-row fbi"><span class="hr-n">1</span><span class="hr-t">Выберите крепость</span><span class="hr-sum">C48 · на 26 литров</span></div>
     <div class="how-grid fbi" role="radiogroup" aria-label="Крепость браги">
       <button class="hg-cell hmode" type="button" role="radio" aria-checked="false" data-kg="6 кг" data-t="20–35 °C" data-p="14%" data-days="2 дня"><span class="hg-top"><span class="hg-ava">6<small>кг</small></span><span class="hg-meta">20–35 °C</span></span><span class="hg-big">14<small>%</small></span><span class="hg-title">за 2 дня</span></button>
@@ -164,111 +153,72 @@
       <div class="hg-cell hstep"><span class="hg-top"><span class="hg-ava hg-n">4</span><span class="hg-meta">1 пакет</span></span><span class="hg-title">Добавьте пакетик дрожжей — брага <mark data-f="p">21%</mark> будет готова через <mark data-f="days">7–10 дней</mark></span></div>
     </div>
     <div class="note fbi"><svg class="i" ><use href="#i-alert"/></svg> Не используйте гидрозатвор</div>
+    </div>
   </section>
 
-  <!-- оригинал -->
-  <section class="vl1 sec c" style="padding-left:0;padding-right:0" id="original">
-    <div class="sec-head" style="padding:0 var(--pad)"><h2 class="display d2 rv">Как отличить<br>оригинал</h2><span class="label-s">Подделки встречаются. Проверьте пачку по признакам от владельца бренда.</span></div>
-    <div class="orig">
+  <!-- оригинал: признак от клиента 30.09 — строка «Изготовитель» на обороте пакета -->
+  <section class="sec c orig-sec" id="original">
+    <div class="sban">
+      <h2 class="display sb-title"><span class="sb-l">Дабл Снейк —</span><span class="sb-stamp">Оригинал</span><span class="sb-l">только от производителя</span></h2>
+      <span class="sb-pill sb-p1">Изготовитель — ООО «Русс-маркет»</span>
+      <span class="sb-pill sb-p2">Новосибирск</span>
+      <span class="sb-pill sb-p3">даблснейк.рф</span>
+      <span class="sb-pill sb-p4">Правообладатель</span>
+      <p class="sb-text">Оригинальные дрожжи теперь маркируются производителем и правообладателем — ООО «Русс-маркет». Все остальные — не оригинал.</p>
+    </div>
+    <div class="orig orig1">
       <div class="orig-pic">
-        <img src="img/c48-cut.png" alt="Пакет C48 Extreme">
-        <span class="hot" data-n="1" style="left:30%;top:22%">1</span>
-        <span class="hot" data-n="2" style="left:66%;top:48%">2</span>
-        <span class="hot" data-n="3" style="left:42%;top:80%">3</span>
-        <span class="orig-note">Точки условные — расставим по фото реальной пачки</span>
+        <span class="ob-pack"><img src="img/c48-back.png" alt="Оборот пакета C48 Extreme"><span class="hot" style="left:18%;top:91.6%">1</span></span>
       </div>
-      <div class="orig-list">
-        <a class="orig-row" href="#" data-n="1"><span class="hr-n">1</span><span><b>Признак 1</b><span>Что проверить на пачке и как выглядит у оригинала</span></span></a>
-        <a class="orig-row" href="#" data-n="2"><span class="hr-n">2</span><span><b>Признак 2</b><span>Что проверить на пачке и как выглядит у оригинала</span></span></a>
-        <a class="orig-row" href="#" data-n="3"><span class="hr-n">3</span><span><b>Признак 3</b><span>Что проверить на пачке и как выглядит у оригинала</span></span></a>
-        <p class="todo orig-todo">Признаки и фото деталей — от клиента</p>
-        <a class="btn btn-dark orig-all" href="#">Все признаки оригинала <svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
+      <div class="ob-text">
+        <div class="label ob-kicker">Где смотреть</div>
+        <div class="display d3">Внизу оборота,<br>под штрихкодом</div>
+        <div class="ob-mark"><span class="hr-n">1</span><span>Изготовитель: ООО «Русс-маркет», Россия, 630005, г.&nbsp;Новосибирск, ул.&nbsp;Николая Островского, д.&nbsp;49. даблснейк.рф</span></div>
+        <div class="ob-warn"><svg class="i"><use href="#i-alert"/></svg><span><b>Другой изготовитель на пачке — не оригинал</b>Все остальные дрожжи под этим названием не являются оригинальными.</span></div>
+        <a class="btn btn-dark ob-buy" href="#buy">Где купить оригинал <svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
       </div>
-    </div>
-    <div class="orig-new">
-      <div class="on-packs">
-        <figure><img src="img/c48-cut.png" alt="Прежняя упаковка — латиница"><figcaption>Было</figcaption></figure>
-        <span class="on-arr" aria-hidden="true">→</span>
-        <figure><span class="newpk" role="img" aria-label="Новая упаковка — логотип кириллицей"><span></span></span><figcaption>Стало</figcaption></figure>
-      </div>
-      <div class="on-text"><div class="display d3">Новая упаковка —<br>это оригинал</div><p>Логотип теперь кириллицей, состав тот же. Если видите обе упаковки в продаже — это нормально. <span class="todo">[подтвердить у клиента + дата]</span></p></div>
     </div>
   </section>
-
-  <!-- опт -->
-  <section class="opt2" id="opt">
-    <div class="opt opt2-grid">
-      <div>
-        <div class="label" style="color:var(--on-dark-2)">Магазинам и оптовикам</div>
-        <h2 class="display d2" style="margin-top:14px">Прайс<br>по запросу</h2>
-        <dl class="lines">
-          <div class="big"><dt>Бренды · позиции</dt><dd>3 · 23</dd></div>
-          <div><dt>Минимальная партия</dt><dd class="todo" style="font-size:14px">[—]</dd></div>
-          <div><dt>Отгрузка со склада</dt><dd class="todo" style="font-size:14px">[—]</dd></div>
-          <div><dt>Доставка</dt><dd>Вся РФ <span class="todo">[уточнить]</span></dd></div>
-          <div><dt>Документы и оплата</dt><dd class="todo" style="font-size:14px">[—]</dd></div>
-        </dl>
-      </div>
-      <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Заявка отправлена';">
-        <div class="label">Кто вы</div>
-        <div class="who">
-          <input type="radio" name="who" id="w1" checked><label for="w1">Магазин<svg class="i" style="width:20px;height:20px"><use href="#i-box"/></svg></label>
-          <input type="radio" name="who" id="w2"><label for="w2">Продавец на маркет­плейсе<svg class="i" style="width:20px;height:20px"><use href="#i-cart"/></svg></label>
-          <input type="radio" name="who" id="w3"><label for="w3">Оптовик<svg class="i" style="width:20px;height:20px"><use href="#i-truck"/></svg></label>
-        </div>
-        <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Как к вам обращаться"></label>
-        <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7"></label>
-        <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="name@mail.ru"></label>
-        <button class="btn btn-red btn-block" style="height:56px">Получить прайс</button>
-        <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></div>
-      </form>
-    </div>
-  </section>
-
-  <!-- о бренде -->
-  <section class="vl1 sec c" id="about">
-    <div class="about">
-      <div>
-        <h2 class="display d2 rv">О бренде</h2>
-        <p class="lead">«Double Snake» — бренд спиртовых турбо-дрожжей, который пользуется большой популярностью у винокуров благодаря высокой скорости брожения и качеству конечного продукта.</p>
-        <p class="muted">Формулы объединяют специально подобранные дрожжи и комплекс питательных веществ. В линейке — продукты с различными сроками сбраживания: от быстрых решений до составов для браги повышенной крепости.</p>
-      </div>
-      <ul class="adv">
-        <li><b>Скорость и крепость</b><span>Быстро получить брагу или достичь максимальной спиртуозности 21%.</span></li>
-        <li><b>Универсальность</b><span>Сахар, декстроза, зерновые солодовые экстракты, меласса.</span></li>
-        <li><b>Органолептика</b><span>Чистый нейтральный аромат, брага быстро осветляется и не пенится.</span></li>
-        <li><b>Выход</b><span>Максимальный выход чистого спирта.</span></li>
-        <li><b>Без ГМО</b><span>Безопасный состав.</span></li>
-        <li><b>Без разбраживания</b><span>Можно сразу вносить в сусло.</span></li>
-        <li><b>Защита браги</b><span>Подавляют постороннюю микрофлору, снижают риск заражения.</span></li>
-      </ul>
-    </div>
-  </section>
-
   <!-- где купить -->
   <section class="buy2" id="buy">
    <div class="c">
-    <div class="buy2-head"><h2 class="display d2 rv">Где купить</h2><span class="label-s">У официальных продавцов — ссылки ведут на конкретные карточки. <span class="todo">[список продавцов — от клиента]</span></span></div>
+    <div class="buy2-head"><h2 class="display d2 rv">Где купить</h2><span class="label-s">У официальных продавцов — ссылки ведут на конкретные карточки.</span></div>
     <div class="buy2-grid">
-      <a class="hg-cell hbuy buy2-card" href="#"><span class="hg-top"><span class="hg-ava" style="background:#005bff;color:#fff">O</span><span class="hg-meta"><span class="todo">[официальный продавец]</span></span></span><span class="hg-title hbuy-t">Ozon<svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="hg-cell hbuy buy2-card" href="#"><span class="hg-top"><span class="hg-ava" style="background:#005bff;color:#fff">O</span><span class="hg-meta"></span></span><span class="hg-title hbuy-t">Ozon<svg class="i"><use href="#i-arrow"/></svg></span></a>
       <a class="hg-cell hbuy buy2-card" href="https://www.wildberries.ru/catalog/183913306/detail.aspx"><span class="hg-top"><span class="hg-ava" style="background:#a73afd;color:#fff">W</span><span class="hg-meta">ООО «Русс-маркет»</span></span><span class="hg-title hbuy-t">Wildberries<svg class="i"><use href="#i-arrow"/></svg></span></a>
-      <a class="hg-cell hbuy buy2-card" href="#"><span class="hg-top"><span class="hg-ava" style="background:#fc0">Я</span><span class="hg-meta"><span class="todo">[официальный продавец]</span></span></span><span class="hg-title hbuy-t">Яндекс Маркет<svg class="i"><use href="#i-arrow"/></svg></span></a>
-      <a class="hg-cell hbuy buy2-card" href="#opt"><span class="hg-top"><span class="hg-ava" style="background:var(--ink);color:#fff"><svg class="i"><use href="#i-truck"/></svg></span><span class="hg-meta">Прайс по запросу</span></span><span class="hg-title hbuy-t">Магазинам — стать продавцом<svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="hg-cell hbuy buy2-card" href="#"><span class="hg-top"><span class="hg-ava" style="background:#fc0">Я</span><span class="hg-meta"></span></span><span class="hg-title hbuy-t">Яндекс Маркет<svg class="i"><use href="#i-arrow"/></svg></span></a>
+      <a class="hg-cell hbuy buy2-card" href="#contact" data-contact><span class="hg-top"><span class="hg-ava" style="background:var(--ink);color:#fff"><svg class="i"><use href="#i-truck"/></svg></span><span class="hg-meta">Опт и сотрудничество</span></span><span class="hg-title hbuy-t">Магазинам — стать продавцом<svg class="i"><use href="#i-arrow"/></svg></span></a>
     </div>
      </div>
   </section>
 
   <!-- FAQ -->
-  <section class="vl1 faq-split sec c" style="padding-left:0;padding-right:0" id="faq">
-    <div class="sec-head" style="padding:0 var(--pad)"><h2 class="display d2 rv">Частые<br>вопросы</h2></div>
-    <div class="faq">
-      <details><summary>Брага встала или бродит дольше таблицы</summary><p><span class="todo">[ответ — от клиента]</span></p></details>
-      <details><summary>Почему без гидрозатвора</summary><p><span class="todo">[ответ — от клиента]</span></p></details>
-      <details><summary>Как отличить подделку</summary><p>Смотрите признаки в разделе <a href="#original" style="text-decoration:underline">«Как отличить оригинал»</a>.</p></details>
-      <details><summary>Можно ли купить оптом</summary><p>Да — оставьте заявку в разделе <a href="#opt" style="text-decoration:underline">«Оптовикам»</a>, пришлём прайс.</p></details>
+  <section class="sec c faq4" id="faq">
+    <div class="pnl-head"><h2 class="display d2 rv">Частые вопросы</h2><p>Брожение, оригинал, опт — коротко о главном.</p></div>
+    <div class="faq4-list">
+      <details><summary>Брага встала или бродит дольше таблицы</summary><p>Чаще всего причина в температуре: ниже 18 °C дрожжи замедляются. Перенесите ёмкость в тёплое место и перемешайте брагу — брожение возобновится в течение суток. <span class="label-s">(рыба)</span></p></details>
+      <details><summary>Какой выход спирта ожидать</summary><p>Из 1 кг сахара при полном сбраживании получается около 0,5 л спирта крепостью 96%. Точный выход зависит от режима и перегонки. <span class="label-s">(рыба)</span></p></details>
+      <details><summary>Брага пахнет неприятно — что не так</summary><p>Резкий запах обычно появляется при перегреве выше 35 °C или нехватке сахара по таблице. Держите температуру в пределах режима. <span class="label-s">(рыба)</span></p></details>
+      <details><summary>Как отличить оригинал</summary><p>Посмотрите строку «Изготовитель» внизу оборота пакета: у оригинала там указано ООО «Русс-маркет». Подробнее — в разделе <a href="#original" style="text-decoration:underline">«Как отличить оригинал»</a>.</p></details>
+      <details><summary>Можно ли купить оптом</summary><p>Да — нажмите <a href="#contact" data-contact style="text-decoration:underline">«Связаться»</a> и оставьте контакты, мы ответим.</p></details>
     </div>
   </section>
-
+  <!-- связаться: общая лаконичная форма (как во всплывающем окне по кнопке «Связаться») -->
+  <section class="cta-sec" id="contact">
+    <div class="cform">
+      <div class="cform-l">
+        <h2 class="display cform-title">Связаться<br>с нами</h2>
+        <p class="cform-sub">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+      </div>
+      <form class="cform-f" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Заявка отправлена';">
+        <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Ваше имя"></label>
+        <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7 999 999-99-99"></label>
+        <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
+        <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
+        <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></div>
+      </form>
+    </div>
+  </section>
 
 </main>
 </div>
@@ -277,23 +227,22 @@
     <span><b>до 21%</b> крепости браги</span><i aria-hidden="true"></i>
     <span><b>от 2 дней</b> брожения</span><i aria-hidden="true"></i>
     <span><b>26 л</b> на пакет</span><i aria-hidden="true"></i>
-    <span><b>23</b> позиции в 3 линейках</span><i aria-hidden="true"></i>
     <span><b>без ГМО</b></span>
   </div>
   <div class="ft-body">
     <div class="ft-l">
       <div class="ft-col">
         <div class="ft-label">Сайт</div>
-        <a href="index.html#lineup">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#original">Как отличить оригинал</a><a href="index.html#opt">Оптовикам</a><a href="index.html#about">О компании</a><a href="index.html#faq">Частые вопросы</a>
+        <a href="index.html#lineup">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#about">О компании</a><a href="index.html#faq">Частые вопросы</a><a href="index.html#contact" data-contact>Связаться</a>
       </div>
       <div class="ft-col">
         <div class="ft-label">Бренды</div>
-        <a href="index.html#lineup">Дабл Снейк</a><a href="#">Double Distill</a><a href="#">Dr. Drink</a>
+        <a href="index.html#lineup">Дабл Снейк</a><a href="index.html#brands">Double Distill</a><a href="index.html#brands">Dr. Drink</a>
       </div>
       <div class="ft-bottom ft-bottom-l"><span>© 2026 Дабл Снейк — официальный сайт бренда</span><a href="#">Политика обработки персональных данных</a></div>
     </div>
     <div class="ft-r">
-      <div class="ft-cta"><a class="ft-btn" href="index.html#opt">Запросить прайс</a><span class="ft-note">Опт и вопросы — ответим на почту</span></div>
+      <div class="ft-cta"><button class="ft-btn" type="button" data-contact>Связаться</button><span class="ft-note">Опт и вопросы — ответим на почту</span></div>
       <a class="ft-mail" href="mailto:rus-samogon@yandex.ru">rus-samogon@yandex.ru</a>
       <dl class="ft-req">
         <div><dt>Компания</dt><dd>ООО «Русс-маркет»</dd></div>
@@ -301,17 +250,30 @@
         <div><dt>ОГРН</dt><dd>1125476102982</dd></div>
         <div><dt>Город</dt><dd>Новосибирск</dd></div>
       </dl>
-      <div class="ft-bottom ft-bottom-r"><span class="todo">Телефон, адрес, соцсети — от клиента</span><span>Концепт 2 · 28.09.2026</span></div>
+      <div class="ft-bottom ft-bottom-r"><span></span><span>Концепт 2 · 28.09.2026</span></div>
     </div>
   </div>
 </footer>
 <nav class="tabbar" aria-label="Навигация">
   <a href="index.html" class="on" aria-label="Главная"><svg class="i" ><use href="#i-home"/></svg></a>
-  <a href="index.html#lineup" class="" aria-label="Продукция"><svg class="i" ><use href="#i-box"/></svg></a>
-  <a href="index.html#original" aria-label="Как отличить оригинал"><svg class="i" ><use href="#i-shield"/></svg></a>
-  <a href="index.html#opt" aria-label="Оптовикам"><svg class="i" ><use href="#i-truck"/></svg></a>
-  <a href="index.html#buy" aria-label="Где купить"><svg class="i" ><use href="#i-cart"/></svg><span class="count">3</span></a>
-</nav>
-<script src="site.js"></script>
-</body>
+  <a href="index.html#lineup" aria-label="Продукция"><svg class="i" ><use href="#i-box"/></svg></a>
+  <a href="index.html#buy" aria-label="Где купить"><svg class="i" ><use href="#i-cart"/></svg></a>
+  <a href="index.html#contact" data-contact aria-label="Связаться"><svg class="i" ><use href="#i-chat"/></svg></a>
+</nav><dialog class="cdlg" id="contact-dlg" aria-labelledby="cdlg-title">
+  <button class="cdlg-x" type="button" aria-label="Закрыть" data-close><svg class="i"><use href="#i-close"/></svg></button>
+  <div class="cform">
+    <div class="cform-l">
+      <h2 class="display cform-title" id="cdlg-title">Связаться<br>с нами</h2>
+      <p class="cform-sub">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+    </div>
+    <form class="cform-f" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Заявка отправлена';">
+      <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Ваше имя"></label>
+      <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7 999 999-99-99"></label>
+      <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
+      <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
+      <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></div>
+    </form>
+  </div>
+</dialog>
+<script src="site.js"></script></body>
 </html>

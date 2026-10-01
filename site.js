@@ -68,3 +68,11 @@ document.querySelectorAll('.orig-row').forEach((r) => {
   ['mouseenter', 'focus'].forEach((e) => r.addEventListener(e, () => hot.classList.add('on')));
   ['mouseleave', 'blur'].forEach((e) => r.addEventListener(e, () => hot.classList.remove('on')));
 });
+
+// «Связаться»: любая кнопка/ссылка с data-contact открывает всплывающую форму
+const dlg = document.getElementById('contact-dlg');
+if (dlg) {
+  document.querySelectorAll('[data-contact]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); dlg.showModal(); }));
+  dlg.querySelector('[data-close]').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+}
