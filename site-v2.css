@@ -1,0 +1,80 @@
+/* Правки клиента 01.10 («Дубль 2 сайт дрожжи (2).docx») — только для index-v2.html, поверх site.css */
+
+/* 1. первый экран как 28.09: левая половина белая, справа красная с пачками; шапка теперь 80 px */
+.first-screen { background: var(--white); min-height: calc(100vh - 80px); min-height: calc(100svh - 80px); }
+@media (max-width: 991px) { .first-screen { min-height: 0; } }
+
+/* 3–4. единые заголовки блоков: слева, пояснение справа (как у «Продукции» и «Частых вопросов») */
+.ttl { text-align: left; }
+.ttl h2 { white-space: nowrap; }
+@media (max-width: 767px) { .ttl h2 { white-space: normal; } }
+.about3 .ttl { margin: 104px 0 0; padding: 0 var(--pad); }
+.about3 .ab3-grid { padding-top: 32px; }
+.pb .ttl { margin: 0; padding: 56px var(--pad) 0; }
+.buy2 .ttl { padding: 0 var(--pad); margin-bottom: 36px; }
+.orig-sec .ttl { margin-bottom: 32px; }
+@media (max-width: 767px) {
+  .about3 .ttl { margin-top: 56px; }
+  .pb .ttl { padding-top: 40px; }
+}
+
+/* 6. пачки в карточках одного размера: на фото Whisky занимает 56 % высоты кадра, «Фрукты» — 94 %, C100 — 84 %, остальные ≈ 88 % */
+.pcard-pic img.zw { height: 157%; }
+.pcard-pic img.zf { height: 94%; }
+.pcard-pic img[src$="c100.png"] { height: 104%; }
+
+/* 7. расшифровка цифр в карточке: «Крепость браги» над числом, вес и срок с подписями */
+.pcard-row { align-items: flex-end; }
+.pcard-str { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex: none; }
+.pcard-str small { font: 500 12px/1.2 var(--text); color: var(--ink-2); }
+.pcard-spec { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 14px 0 0; }
+.pcard-spec div { display: flex; flex-direction: column; gap: 3px; }
+.pcard-spec dt { font: 500 12px/1.2 var(--text); color: var(--ink-2); }
+.pcard-spec dd { margin: 0; font: 600 15px/1.2 var(--cond); text-transform: uppercase; }
+
+
+/* заголовок «Продукции» вынесен из панели — все заголовки на одной линии */
+.pnl-sec > .ttl { margin-bottom: 32px; }
+.pnl-sec > .pnl { padding-top: 40px; }
+@media (max-width: 767px) { .pnl-sec > .ttl { padding: 0 4px; } }
+
+/* карточки «Преимущества»: номер внутри карточки, просто красной цифрой, без печати */
+.about3 .ab3-seal { position: static; display: block; width: auto; height: auto; clip-path: none; background: none; color: var(--red); font: 900 48px/.9 var(--display); place-items: initial; }
+.about3 .ab3-card { padding-top: 32px; }
+.about3 .ab3-grid { row-gap: 24px; }
+@media (max-width: 767px) { .about3 .ab3-seal { font-size: 40px; } .about3 .ab3-card { padding-top: 24px; } .about3 .ab3-grid { gap: 12px; } }
+
+/* без горизонтальных линий на всей странице — остаются только вертикальные (сетка, разделители колонок). Подчёркивание полей формы оставлено — без него поле не видно */
+main *:not(input), main *::before, main *::after, footer.ft *, .hd4, .hd4 * { border-top: 0 !important; border-bottom: 0 !important; }
+/* но рамки кнопок и элементов — целиком (уточнение пользователя): возвращаем верх и низ */
+.ft-btn, .pb-arrow, .hs-btn, .btn-out { border-top-width: 1.5px !important; border-top-style: solid !important; border-bottom-width: 1.5px !important; border-bottom-style: solid !important; }
+.pb-arrow { border-top-width: 1px !important; border-bottom-width: 1px !important; }
+
+/* первый экран во всю ширину окна: половины до краёв, текст слева — от края контейнера 1440 */
+@media (min-width: 1441px) {
+  main > .first-screen { max-width: none; }
+  .first-screen .h2-text { padding-left: calc((100vw - 1440px) / 2 + var(--pad)); }
+  .first-screen .ha-num { right: calc((100vw - 1440px) / 2 + var(--pad)); }
+}
+@media (min-width: 1441px) {
+  .first-screen .ha-pack { left: 56%; }
+  .first-screen .ha-main { height: min(58%, 32vw); }
+  .first-screen .ha-b3 { height: min(52%, 28vw); }
+  .first-screen .ha-b1, .first-screen .ha-b2 { height: min(38%, 21vw); }
+}
+footer.ft .ft-btn { border-top: 1.5px solid var(--on-dark) !important; border-bottom: 1.5px solid var(--on-dark) !important; }
+footer.ft .ft-btn:hover { border-color: var(--red) !important; }
+
+/* шапка и первый экран — во всю ширину окна, содержимое от краёв с полем var(--pad) (уточнение пользователя: контейнер блока во всю ширину) */
+.hd4-in { max-width: none; grid-template-columns: 1fr auto 1fr; }
+.hd4-logo { justify-self: start; }
+.hd4-nav { justify-self: center; }
+@media (min-width: 1441px) {
+  .first-screen .h2-text { padding-left: var(--pad); }
+  .first-screen .ha-num { right: var(--pad); }
+  .first-screen .ha-pack { left: 50%; }
+  .first-screen .ha-main { height: min(62%, 30vw); }
+  .first-screen .ha-b3 { height: min(56%, 27vw); }
+  .first-screen .ha-b1, .first-screen .ha-b2 { height: min(40%, 19vw); }
+}
+@media (max-width: 1099px) { .hd4-in { grid-template-columns: 1fr auto; } }
