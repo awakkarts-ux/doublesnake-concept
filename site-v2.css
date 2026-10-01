@@ -80,3 +80,111 @@ footer.ft .ft-btn:hover { border-color: var(--red) !important; }
 @media (max-width: 1099px) { .hd4-in { grid-template-columns: 1fr auto; } }
 /* в подвале линия под полосой преимуществ остаётся (уточнение пользователя) */
 footer.ft .ft-adv { border-bottom: 1px solid var(--dark-line) !important; }
+
+/* ===== правки со звонка 01.10 (запись встречи) ===== */
+/* первый экран, слева: всё по центру половины, подписи крупнее, без светлых лучей на белом */
+.first-screen .hero2::before { display: none; }
+.first-screen .h2-text { align-items: center; text-align: center; justify-content: center; }
+.first-screen .h2-kicker { font: 700 clamp(18px, 1.6vw, 24px)/1.2 var(--cond); letter-spacing: .04em; color: var(--ink); }
+.first-screen .h2-logo { margin-top: 28px; }
+.first-screen .h2-logo img { height: clamp(260px, 44vh, 470px); margin: 0 auto; }
+.first-screen .h2-sub { max-width: none; margin-top: 28px; font: 900 clamp(30px, 2.8vw, 46px)/1 var(--display); text-transform: uppercase; }
+.first-screen .h2-cta { justify-content: center; margin-top: 36px; }
+.first-screen .h2-cta .btn { height: 60px; padding: 0 48px; font-size: 18px; }
+@media (min-width: 1441px) { .first-screen .h2-text { padding-left: var(--pad); } }
+/* справа: одна пачка C48 — ссылка на карточку, сверху крупно «до 21%» */
+.first-screen .ha-link { position: absolute; inset: 0; z-index: 3; }
+.first-screen .ha-main, .first-screen .ha-link:hover .ha-main { left: 50%; top: 55%; height: min(70%, 40vw); translate: -50% -50%; rotate: -6deg; transition: rotate .4s cubic-bezier(.2, .7, .2, 1), scale .4s cubic-bezier(.2, .7, .2, 1); }
+.first-screen .ha-link:hover .ha-main { rotate: -2deg; scale: 1.03; }
+.first-screen .ha-num { top: 32px; right: var(--pad); font-size: clamp(64px, 6vw, 104px); line-height: .85; align-items: flex-end; }
+.first-screen .ha-num small { margin-top: 8px; max-width: none; font: 700 clamp(16px, 1.3vw, 20px)/1.1 var(--cond); text-transform: uppercase; opacity: 1; }
+.first-screen .ha-flag { z-index: 4; left: var(--pad); transition: background-color .2s ease; }
+.first-screen .ha-flag:hover { background: #fff; }
+@media (max-width: 767px) {
+  .first-screen .h2-logo img { height: 230px; }
+  .first-screen .h2-sub { font-size: 26px; }
+  .first-screen .h2-cta { width: 100%; }
+  .first-screen .ha-num { font-size: 52px; top: 20px; }
+  .first-screen .ha-main { height: 64%; top: 58%; }
+}
+
+/* наши бренды: без линий сетки на фоне (секция со своим фоном), без стрелок; вариант А — логотип слева снизу, пачки справа сверху */
+#brands { position: relative; z-index: 1; background: var(--page); }
+.pb-card { cursor: default; }
+.pb-dd .pb-logo-dd { width: min(100%, 260px); }
+@media (min-width: 768px) {
+  .pb-text { left: var(--inL); right: auto; bottom: 32px; max-width: 42%; }
+  .pb-fan { top: 24px; bottom: auto; right: 3%; width: 60%; height: 82%; }
+}
+/* вариант Б (index-v2.html?brands=b): баннер ниже и шире — обрезан верх, раскладка прежняя (логотип и пачки внизу) */
+.brands-b .pb-card { aspect-ratio: 2 / 1; }
+@media (min-width: 768px) { .brands-b .pb-fan { top: auto; bottom: -6%; height: 96%; } .brands-b .pb-text { max-width: 36%; } }
+
+/* оригинал: новый горизонтальный мокап низа оборота, строку «Изготовитель» видно на самом фото */
+.orig1 .orig-pic { min-height: 0; aspect-ratio: auto; display: flex; align-items: center; padding: 24px; }
+.ob-pack2 { width: 100%; aspect-ratio: 1376 / 768; }
+.ob-pack2 img { filter: none; }
+
+/* форма: обязательный выбор «Кто вы» — защита от спама */
+.who2 { margin: 6px 0 22px; padding: 0; border: 0 !important; }
+.who2 legend { padding: 0; margin-bottom: 12px; font: 500 12px/1 var(--text); color: var(--on-dark-2); }
+.who2 legend span { color: var(--red); }
+.who2 { display: flex; flex-wrap: wrap; gap: 8px; }
+.who2 label { position: relative; cursor: pointer; }
+.who2 input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.who2 label span { display: inline-flex; align-items: center; height: 42px; padding: 0 16px; box-shadow: inset 0 0 0 1px #4a4a4a; font: 700 14px/1 var(--cond); text-transform: uppercase; color: var(--on-dark); transition: background-color .2s ease, color .2s ease, box-shadow .2s ease; }
+.who2 label:hover span { box-shadow: inset 0 0 0 1px var(--on-dark); }
+.who2 input:checked + span { background: var(--yellow); color: var(--ink); box-shadow: none; }
+.who2 input:focus-visible + span { outline: 3px solid var(--yellow); outline-offset: 2px; }
+
+/* подвал: без кнопки «Связаться»; подпись, e-mail и реквизиты — по верху, на одной линии с колонками слева */
+.ft-r { grid-template-rows: auto auto auto 1fr auto; }
+.ft-r .ft-label { margin-bottom: 22px; }
+.ft-mail { margin-top: 0; }
+.ft-req { margin-top: 28px; }
+/* баннеры: пачки не наезжают на логотип */
+@media (min-width: 768px) {
+  .pb-card .pb-fan { top: 7%; bottom: auto; right: 4%; width: 54%; height: 64%; }
+  .pb-card .pb-fan img { height: 27cqw; }
+  .pb-card .pb-fan .f2 { height: 30cqw; }
+  .pb-card .pb-text { max-width: 40%; z-index: 3; }
+  .brands-b .pb-card .pb-fan { top: auto; bottom: 6%; right: 3%; width: 52%; height: 86%; }
+  .brands-b .pb-card .pb-fan img { height: 22cqw; }
+  .brands-b .pb-card .pb-fan .f2 { height: 25cqw; }
+  .brands-b .pb-card .pb-text { max-width: 38%; }
+}
+@media (min-width: 768px) {
+  .pb-card .pb-fan { top: 5%; height: 68%; width: 56%; right: 3%; }
+  .pb-card .pb-fan img { height: 33cqw; }
+  .pb-card .pb-fan .f2 { height: 36cqw; }
+  .brands-b .pb-card .pb-fan { bottom: 4%; height: 92%; width: 54%; }
+  .brands-b .pb-card .pb-fan img { height: 28cqw; }
+  .brands-b .pb-card .pb-fan .f2 { height: 31cqw; }
+}
+/* баннеры (01.10, уточнение пользователя): логотип и подпись — слева вверху, пачки — как было раньше (крупно, справа снизу) */
+@media (min-width: 768px) {
+  html:not(.brands-b) .pb-card .pb-text { top: 32px; bottom: auto; }
+  html:not(.brands-b) .pb-card .pb-fan { top: auto; bottom: 8%; right: 4%; width: 60%; height: 78%; }
+  html:not(.brands-b) .pb-card .pb-fan img { height: 38cqw; }
+  html:not(.brands-b) .pb-card .pb-fan .f2 { height: 42cqw; }
+}
+@media (max-width: 767px) { .pb-card .pb-text { top: 20px; bottom: auto; } .pb-card .pb-fan { top: auto; bottom: 4%; } }
+
+/* 01.10: вертикальные линии на фоне сайта убраны (решение пользователя) */
+body::before { display: none !important; }
+
+/* «Где купить»: официальные логотипы маркетплейсов вместо кружка с буквой и названия */
+.mp-logo { display: flex; align-items: center; height: 40px; }
+.mp-logo img { height: 34px; width: auto; max-width: 100%; }
+.mp-logo img[src$="mp-ozon.svg"] { height: 30px; }
+.mp-logo img[src$="mp-wb.svg"] { height: 32px; }
+.mp-logo img[src$="mp-ym.svg"] { height: 40px; }
+.buy2-card .hg-top { align-items: center; }
+.buy2-card .hbuy-t { justify-content: flex-end; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* логотипы маркетплейсов меньше, названия снова видны (уточнение пользователя) */
+.mp-logo { height: 28px; }
+.mp-logo img[src$="mp-ozon.svg"] { height: 18px; }
+.mp-logo img[src$="mp-wb.svg"] { height: 19px; }
+.mp-logo img[src$="mp-ym.svg"] { height: 26px; }
+.buy2-card .hbuy-t { justify-content: space-between; }
