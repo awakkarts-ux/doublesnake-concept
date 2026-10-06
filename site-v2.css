@@ -427,3 +427,28 @@ body { padding-bottom: 0 !important; }
   .pcard-spec dd { font-size: 13px; white-space: nowrap; }
 }
 @media (min-width: 768px) and (max-width: 991px) { .first-screen .h2-sub { font-size: 24px; } }
+
+/* ===== «Сертификаты»: декларация ЕАЭС (06.10) ===== */
+.decl-sec { padding-left: var(--pad); padding-right: var(--pad); }
+.decl-sec .ttl { padding: 0; margin-bottom: 32px; }
+.decl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 24px; }
+.decl-pic { display: block; padding: 32px; background: var(--white); }
+.decl-pic img { width: 100%; height: auto; box-shadow: 0 10px 30px rgba(0, 0, 0, .12); transition: transform .3s ease; }
+.decl-pic:hover img { transform: scale(1.015); }
+.decl-text { display: flex; flex-direction: column; gap: 16px; padding: 48px; background: var(--white); }
+.decl-eac { width: 64px; height: auto; }
+.decl-kicker { margin: 0; font: 700 14px/1.2 var(--cond); text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); }
+.decl-title { margin: -6px 0 8px; font: 900 clamp(32px, 3vw, 48px)/.95 var(--display); text-transform: uppercase; }
+.decl-facts { display: grid; gap: 14px; margin: 0; }
+.decl-facts div { display: grid; grid-template-columns: 200px 1fr; gap: 16px; }
+.decl-facts dt { font: 500 14px/1.35 var(--text); color: var(--ink-2); }
+.decl-facts dd { margin: 0; font: 600 16px/1.35 var(--cond); text-transform: uppercase; }
+.decl-btn { align-self: flex-start; margin-top: auto; }
+@media (max-width: 991px) { .decl { grid-template-columns: 1fr; } .decl-pic { max-width: 520px; } .decl-text { padding: 32px; } }
+@media (max-width: 767px) {
+  .decl-pic { padding: 16px; }
+  .decl-text { padding: 24px 20px; }
+  .decl-facts div { grid-template-columns: 1fr; gap: 2px; }
+  .decl-facts dd { font-size: 15px; }
+  .decl-btn { width: 100%; }
+}
