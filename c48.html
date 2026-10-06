@@ -31,55 +31,57 @@
   <div class="hd4-in">
     <a class="hd4-logo" href="index.html" aria-label="Дабл Снейк — на главную"><img src="img/logo-word.svg" alt="Дабл Снейк"></a>
     <nav class="hd4-nav" aria-label="Разделы"><a href="index.html#lineup" class="on" aria-current="page">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#about">О компании</a><a href="index.html#faq">FAQ</a><a href="#contacts">Контакты</a></nav>
-    <div class="hd4-act"><button class="btn btn-red hd-btn" type="button" data-contact>Связаться</button></div>
+    <div class="hd4-act"><button class="btn btn-red hd-btn" type="button" data-contact>Связаться</button><button class="hd4-burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button></div>
   </div>
 </header>
+<nav class="mnav" id="mnav" aria-label="Меню" hidden>
+  <div class="mnav-list"><a href="index.html#lineup" class="on" aria-current="page">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#about">О компании</a><a href="index.html#faq">FAQ</a><a href="#contacts">Контакты</a></div>
+  <button class="btn btn-red mnav-cta" type="button" data-contact>Связаться</button>
+</nav>
 <div class="app app-pd">
 <main>
-  <!-- 1. Первый экран: слева крошки + галерея, справа код, название, блок действий, короткое описание -->
-  <div class="pd vl1">
-    <nav class="crumbs" aria-label="Хлебные крошки">
+  <!-- страница товара v3 (03.10): в стиле главной — белые панели на сером, параметры с подписями как в карточках -->
+  <section class="sec c pd3">
+    <nav class="crumbs pd3-crumbs" aria-label="Хлебные крошки">
       <a href="index.html#lineup">Продукция</a><a href="index.html#lineup">Дабл Снейк</a><span aria-current="page">C48 Extreme</span>
     </nav>
-
-    <div class="pd-gal pd-gal1">
-      <div class="pd-stage">
-        <span class="tag red">До 21% крепости</span>
-        <figure class="pd-slide on"><img src="img/c48.png" alt="Пакет Double Snake C48 Extreme"></figure>
+    <div class="pd3-grid">
+      <figure class="pd3-pic">
+        <span class="tag yellow">Флагман</span>
+        <img src="img/c48.png" alt="Пакет Дабл Снейк C48 Extreme">
+      </figure>
+      <div class="pd3-info">
+        <img class="pd3-brand" src="img/logo-word.svg" alt="Дабл Снейк">
+        <h1 class="display pd3-title">C48 Extreme</h1>
+        <p class="pd3-lead">Спиртовые турбо-дрожжи для браги повышенной крепости. Один пакет на 26 литров, брожение от 2 дней.</p>
+        <dl class="pcard-spec pd3-spec">
+          <div><dt>Крепость браги</dt><dd>до 21%</dd></div>
+          <div><dt>Вес пакета</dt><dd>130 г</dd></div>
+          <div><dt>Срок брожения</dt><dd>2–10 дней</dd></div>
+          <div><dt>Объём сусла</dt><dd>26 л</dd></div>
+        </dl>
+        <div class="pd3-buy">
+          <a class="btn btn-red pd3-main" href="https://www.wildberries.ru/catalog/183913306/detail.aspx">Купить на Wildberries</a>
+          <a class="btn pd3-mp" href="#"><img src="img/mp-ozon.svg" alt="Ozon"></a>
+          <a class="btn pd3-mp" href="#"><img src="img/mp-ym.svg" alt="Яндекс Маркет"></a>
+        </div>
+        <a class="pd3-opt" href="#contact" data-contact>Опт и вопросы — связаться <svg class="i"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
+  </section>
 
-    <div class="pd-info">
-      <h1 class="display d1">C48<br>Extreme</h1>
-      <div class="pd-acts">
-        <div class="pd-acts-l">
-          <img class="pd-logo" src="img/logo-word.svg" alt="Дабл Снейк">
-        </div>
-        <div class="pd-acts-r">
-          <div class="label-s">Крепость браги</div>
-          <div class="pd-num">до 21%</div>
-          <a class="btn btn-red btn-block" href="https://www.wildberries.ru/catalog/183913306/detail.aspx">Купить на WB</a>
-          <div class="pd-mp"><a class="btn btn-dark btn-s" href="#">Ozon</a><a class="btn btn-dark btn-s" href="#">Я.Маркет</a></div>
-          <a class="pd-opt" href="#contact" data-contact>Опт и вопросы — связаться <svg class="i"><use href="#i-arrow"/></svg></a>
-        </div>
-      </div>
-      <p class="pd-lead">Спиртовые турбо-дрожжи для браги повышенной крепости. Один пакет на 26 литров, брожение от 2 дней.</p>
-    </div>
-  </div>
-
-  <!-- 2. Вкладки на всю ширину -->
-  <section class="pd-tabs vl1">
+  <!-- вкладки: белая панель -->
+  <section class="sec c pd3-tabs pd-tabs">
+    <div class="pnl pd3-pnl">
     <div class="seg" role="tablist" aria-label="О товаре">
       <button role="tab" aria-selected="true" aria-controls="p-desc">Описание</button>
       <button role="tab" aria-selected="false" aria-controls="p-specs">Характеристики</button>
       <button role="tab" aria-selected="false" aria-controls="p-docs">Документы</button>
-    </div>
-    <div class="pane" id="p-desc" role="tabpanel">
+    </div><div class="pane" id="p-desc" role="tabpanel">
       <div class="pd-text">
         <p><b>C48 Extreme — самая крепкая позиция линейки Дабл Снейк.</b> Турбо-дрожжи рассчитаны на тех, кому нужна брага до 21% без долгого ожидания и лишних добавок: всё необходимое для брожения уже в пакете.</p>
         <p>Штамм устойчив к высокой концентрации спирта и перепадам температуры, поэтому брожение идёт ровно и до конца — без «зависшей» браги на середине. Встроенный пеногаситель позволяет заполнять ёмкость почти целиком, а сбалансированное питание снижает количество побочных запахов.</p>
         <p>Подходит для сахарной браги, декстрозы, солодовых экстрактов и мелассы. Один пакет — на 26 литров сусла. Выбирайте режим под свою задачу: быстрый — за 2 дня до 14%, максимальный — за 7–10 дней до 21%.</p>
-        <p class="label-s">Текст-рыба для концепта. Финальный текст пришлёт клиент.</p>
       </div>
     </div>
     <div class="pane" id="p-specs" role="tabpanel" hidden>
@@ -103,7 +105,6 @@
           <li><span>ГМО</span><b>нет</b></li>
           <li><span>Артикул WB</span><b>183913306</b></li>
         </ul>
-        <p class="label-s pd-fish">Характеристики — рыба для концепта, сверить с оборотом пакета.</p>
       </div>
       <h3 class="label pd-sub">Режимы на 26 л · с оборота пакета</h3>
       <div class="modes">
@@ -116,15 +117,16 @@
     </div>
     <div class="pane" id="p-docs" role="tabpanel" hidden>
       <div class="pd-docs">
-        <figure class="doc"><div class="doc-ph">Сертификат / декларация</div><figcaption>Декларация о соответствии</figcaption></figure>
-        <figure class="doc"><div class="doc-ph">Оборот пакета</div><figcaption>Инструкция с упаковки</figcaption></figure>
+        <figure class="doc"><a class="doc-img" href="img/declaration-eaes.jpg" target="_blank"><img src="img/declaration-eaes.jpg" alt="Декларация о соответствии ЕАЭС N RU Д-RU.PA01.B., ООО «Русс-маркет»"></a><figcaption>Декларация о соответствии ЕАЭС · действует до 04.08.2031</figcaption></figure>
+        <figure class="doc"><a class="doc-img" href="img/c48-back-v3.jpg" target="_blank"><img src="img/c48-back-v3.jpg" alt="Оборот пакета C48: таблица режимов"></a><figcaption>Оборот пакета: инструкция и режимы</figcaption></figure>
       </div>
+    </div>
     </div>
   </section>
 
   <div class="buybar">
-    <div class="nm">C48 Extreme<span>130 г · на 26 л</span></div>
-    <div class="acts"><a class="btn btn-red btn-s" href="https://www.wildberries.ru/catalog/183913306/detail.aspx">Купить на WB</a><a class="btn btn-dark btn-s" href="#">Ozon</a><a class="btn btn-dark btn-s" href="#">Я.Маркет</a></div>
+    <div class="nm">C48 Extreme<span>до 21% · 130 г · на 26 л</span></div>
+    <div class="acts"><a class="btn btn-red btn-s" href="https://www.wildberries.ru/catalog/183913306/detail.aspx">Купить на WB</a></div>
   </div>
 
   <section class="sec faq4">
@@ -136,44 +138,44 @@
     </div>
   </section>
 
-  <section class="sec pnl-sec pd-rel">
+  <section class="sec c pnl-sec pd-rel">
+    <div class="pnl-head ttl"><h2 class="display d2">Другие позиции Дабл Снейк</h2></div>
     <div class="pnl">
-    <div class="chips-row" style="align-items:flex-end"><h2 class="display d2" style="flex:1">Другие позиции<br>Дабл Снейк</h2></div>
     <div class="cards-wrap">
-      <div class="cards" id="cells">
+      <div class="cards">
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"><svg class="i"><use href="#i-star"/></svg></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/c3.png" alt="Пакет C3 Extra"></a>
-        <div class="pcard-row"><h3><a href="c48.html">C3 Extra</a></h3><b class="pcard-num">до 18%</b></div>
-        <div class="pcard-tags"><a href="c48.html">100 г</a><a href="c48.html">3–5 дней</a></div>
+        <div class="pcard-row"><h3><a href="c48.html">C3 Extra</a></h3></div>
+        <dl class="pcard-spec"><div><dt>Крепость браги</dt><dd>до 18%</dd></div><div><dt>Вес пакета</dt><dd>100 г</dd></div><div><dt>Срок брожения</dt><dd>3–5 дней</dd></div></dl>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/c100.png" alt="Пакет C100 Mega"></a>
-        <div class="pcard-row"><h3><a href="c48.html">C100 Mega</a></h3><b class="pcard-num">до 16%</b></div>
-        <div class="pcard-tags"><a href="c48.html">360 г</a><a href="c48.html">5–7 дней</a></div>
+        <div class="pcard-row"><h3><a href="c48.html">C100 Mega</a></h3></div>
+        <dl class="pcard-spec"><div><dt>Крепость браги</dt><dd>до 16%</dd></div><div><dt>Вес пакета</dt><dd>360 г</dd></div><div><dt>Срок брожения</dt><dd>5–7 дней</dd></div></dl>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"><svg class="i"><use href="#i-star"/></svg></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/vodka.png" alt="Пакет C★ Vodka"></a>
-        <div class="pcard-row"><h3><a href="c48.html">C★ Vodka</a></h3><b class="pcard-num">до 15%</b></div>
-        <div class="pcard-tags"><a href="c48.html">72 г</a><a href="c48.html">4–6 дней</a></div>
+        <div class="pcard-row"><h3><a href="c48.html">C★ Vodka</a></h3></div>
+        <dl class="pcard-spec"><div><dt>Крепость браги</dt><dd>до 15%</dd></div><div><dt>Вес пакета</dt><dd>72 г</dd></div><div><dt>Срок брожения</dt><dd>4–6 дней</dd></div></dl>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
-        <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zw" src="img/whisky.png" alt="Пакет Whisky Turbo"></a>
-        <div class="pcard-row"><h3><a href="c48.html">Whisky Turbo</a></h3><b class="pcard-num">до 14%</b></div>
-        <div class="pcard-tags"><a href="c48.html">72 г</a><a href="c48.html">4–5 дней</a></div>
+        <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zw2" src="img/whisky-v2.png" alt="Пакет Whisky Turbo"></a>
+        <div class="pcard-row"><h3><a href="c48.html">Whisky Turbo</a></h3></div>
+        <dl class="pcard-spec"><div><dt>Крепость браги</dt><dd>до 14%</dd></div><div><dt>Вес пакета</dt><dd>72 г</dd></div><div><dt>Срок брожения</dt><dd>4–5 дней</dd></div></dl>
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
         <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zf" src="img/fruits.png" alt="Пакет Фрукты Турбо"></a>
         <div class="pcard-row"><h3><a href="c48.html">Фрукты Турбо</a></h3></div>
-        <div class="pcard-tags"><a href="c48.html">с ферментом глюкоамилазой</a></div>
+        <dl class="pcard-spec"><div><dt>Крепость браги</dt><dd>до 14%</dd></div><div><dt>Вес пакета</dt><dd>72 г</dd></div><div><dt>Срок брожения</dt><dd>4–5 дней</dd></div></dl>
       </article>
       </div>
     </div>
-    <p class="label-s" style="padding:12px var(--pad) 0">Крепость, сроки и вес в карточках — рыба для концепта.</p>    </div>
+    </div>
   </section>
 
 
@@ -190,33 +192,28 @@
     <div class="ft-l">
       <div class="ft-col">
         <div class="ft-label">Сайт</div>
-        <a href="index.html#lineup">Продукция</a><a href="index.html#buy">Где купить</a><a href="index.html#about">О компании</a><a href="index.html#faq">Частые вопросы</a><a href="index.html#contact" data-contact>Связаться</a>
+        <a href="#lineup">Продукция</a><a href="#buy">Где купить</a><a href="#about">О компании</a><a href="#faq">Частые вопросы</a><a href="#contact" data-contact>Связаться</a>
       </div>
       <div class="ft-col">
         <div class="ft-label">Бренды</div>
-        <a href="index.html#lineup">Дабл Снейк</a><a href="index.html#brands">Double Distill</a><a href="index.html#brands">Dr. Drink</a>
+        <a href="#lineup">Дабл Снейк</a><a href="#brands">Double Distill</a><a href="#brands">Dr. Drink</a>
       </div>
-      <div class="ft-bottom ft-bottom-l"><span>© 2026 Дабл Снейк — официальный сайт бренда</span><a href="#">Политика обработки персональных данных</a></div>
+      <div class="ft-bottom ft-bottom-l"><span>© 2026 Дабл Снейк — официальный сайт бренда</span></div>
     </div>
     <div class="ft-r">
-      <div class="ft-cta"><button class="ft-btn" type="button" data-contact>Связаться</button><span class="ft-note">Опт и вопросы — ответим на почту</span></div>
+      <div class="ft-label">Опт и вопросы — ответим на почту</div>
       <a class="ft-mail" href="mailto:rus-samogon@yandex.ru">rus-samogon@yandex.ru</a>
       <dl class="ft-req">
         <div><dt>Компания</dt><dd>ООО «Русс-маркет»</dd></div>
-        <div><dt>ИНН</dt><dd>5405457179</dd></div>
+        <div><dt>ИНН / КПП</dt><dd>5405457179 / 540601001</dd></div>
         <div><dt>ОГРН</dt><dd>1125476102982</dd></div>
-        <div><dt>Город</dt><dd>Новосибирск</dd></div>
+        <div><dt>ОКТМО</dt><dd>50401386</dd></div>
+        <div><dt>Адрес</dt><dd>Новосибирская область, г. Новосибирск, ул. Николая Островского, д. 49</dd></div>
       </dl>
-      <div class="ft-bottom ft-bottom-r"><span></span><span>Концепт 2 · 28.09.2026</span></div>
+      <div class="ft-bottom ft-bottom-r"><span></span></div>
     </div>
   </div>
-</footer>
-<nav class="tabbar" aria-label="Навигация">
-  <a href="index.html" aria-label="Главная"><svg class="i" ><use href="#i-home"/></svg></a>
-  <a href="index.html#lineup" class="on" aria-label="Продукция"><svg class="i" ><use href="#i-box"/></svg></a>
-  <a href="index.html#buy" aria-label="Где купить"><svg class="i" ><use href="#i-cart"/></svg></a>
-  <a href="index.html#contact" data-contact aria-label="Связаться"><svg class="i" ><use href="#i-chat"/></svg></a>
-</nav><dialog class="cdlg" id="contact-dlg" aria-labelledby="cdlg-title">
+</footer><dialog class="cdlg" id="contact-dlg" aria-labelledby="cdlg-title">
   <button class="cdlg-x" type="button" aria-label="Закрыть" data-close><svg class="i"><use href="#i-close"/></svg></button>
   <div class="cform">
     <div class="cform-l">
@@ -227,8 +224,8 @@
       <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Ваше имя"></label>
       <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7 999 999-99-99"></label>
       <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
+      <fieldset class="who2"><legend>Кто вы <span>— обязательно</span></legend><label><input type="radio" name="w2" value="shop" required><span>Магазин</span></label><label><input type="radio" name="w2" value="mp"><span>Продавец на маркетплейсе</span></label><label><input type="radio" name="w2" value="opt"><span>Оптовик</span></label></fieldset>
       <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
-      <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></div>
     </form>
   </div>
 </dialog>

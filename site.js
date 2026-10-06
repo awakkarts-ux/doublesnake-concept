@@ -76,3 +76,12 @@ if (dlg) {
   dlg.querySelector('[data-close]').addEventListener('click', () => dlg.close());
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
 }
+// бургер-меню (телефон и планшет): открыть/закрыть, Esc, клик по пункту закрывает, фон не скроллится
+const burger = document.querySelector('.hd4-burger'), mnav = document.getElementById('mnav');
+if (burger && mnav) {
+  const set = (open) => { burger.setAttribute('aria-expanded', String(open)); burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню'); mnav.hidden = !open; document.documentElement.classList.toggle('mnav-open', open); };
+  burger.addEventListener('click', () => set(burger.getAttribute('aria-expanded') !== 'true'));
+  mnav.addEventListener('click', (e) => { if (e.target.closest('a, [data-contact]')) set(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mnav.hidden) { set(false); burger.focus(); } });
+  window.addEventListener('resize', () => { if (innerWidth >= 992) set(false); });
+}

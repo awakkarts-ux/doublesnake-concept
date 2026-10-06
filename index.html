@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Дабл Снейк — турбо-дрожжи · концепт 2, правки 01.10</title>
+<title>Дабл Снейк — турбо-дрожжи</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500;600;700&family=Fira+Sans+Extra+Condensed:wght@800;900&family=Fira+Sans:wght@400;500&display=swap">
@@ -31,9 +31,13 @@
   <div class="hd4-in">
     <a class="hd4-logo" href="index.html" aria-label="Дабл Снейк — на главную"><img src="img/logo-word.svg" alt="Дабл Снейк"></a>
     <nav class="hd4-nav" aria-label="Разделы"><a href="#lineup">Продукция</a><a href="#buy">Где купить</a><a href="#about">О компании</a><a href="#faq">FAQ</a><a href="#contacts">Контакты</a></nav>
-    <div class="hd4-act"><button class="btn btn-red hd-btn" type="button" data-contact>Связаться</button></div>
+    <div class="hd4-act"><button class="btn btn-red hd-btn" type="button" data-contact>Связаться</button><button class="hd4-burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button></div>
   </div>
 </header>
+<nav class="mnav" id="mnav" aria-label="Меню" hidden>
+  <div class="mnav-list"><a href="#lineup">Продукция</a><a href="#buy">Где купить</a><a href="#about">О компании</a><a href="#faq">FAQ</a><a href="#contacts">Контакты</a></div>
+  <button class="btn btn-red mnav-cta" type="button" data-contact>Связаться</button>
+</nav>
 <div class="app">
 <main>
 
@@ -59,15 +63,13 @@
   <section class="sec c about3" id="about">
     <p class="display ab3-say rv"><span class="red">«Double Snake»</span> — бренд спиртовых турбо-дрожжей, который пользуется большой популярностью у&nbsp;винокуров благодаря высокой скорости брожения и&nbsp;качеству конечного продукта</p>
     <p class="ab3-sub">Формулы объединяют специально подобранные дрожжи и комплекс питательных веществ. В линейке — продукты с различными сроками сбраживания: от быстрых решений до составов для браги повышенной крепости.</p>
-    <div class="pnl-head ttl"><h2 class="display d2 rv">Преимущества</h2></div>
-    <div class="ab3-grid">
-      <div class="ab3-card"><span class="ab3-seal">01</span><b>Скорость и крепость</b><span>Быстро получить брагу или достичь максимальной спиртуозности 21%.</span></div>
-      <div class="ab3-card"><span class="ab3-seal">02</span><b>Универсальность</b><span>Сахар, декстроза, зерновые солодовые экстракты, меласса.</span></div>
-      <div class="ab3-card"><span class="ab3-seal">03</span><b>Органолептика</b><span>Чистый нейтральный аромат, брага быстро осветляется и не пенится.</span></div>
-      <div class="ab3-card"><span class="ab3-seal">04</span><b>Выход</b><span>Максимальный выход чистого спирта.</span></div>
-      <div class="ab3-card"><span class="ab3-seal">05</span><b>Без ГМО</b><span>Безопасный состав.</span></div>
-      <div class="ab3-card"><span class="ab3-seal">06</span><b>Без разбраживания</b><span>Можно сразу вносить в сусло.</span></div>
-      <div class="ab3-card"><span class="ab3-seal">07</span><b>Защита браги</b><span>Подавляют постороннюю микрофлору, снижают риск заражения.</span></div>
+    <div class="pnl-head ttl"><h2 class="display d2 rv">Премиальные дрожжи Double Snake — это</h2></div>
+    <div class="ab3-grid ab3-grid3">
+      <div class="ab3-card"><span class="ab3-seal">01</span><b>Рекордные 24–48 часов до финиша</b><span>Сверхбыстрый старт без долгой раскачки. Экономьте дни ожидания без потери качества сырья.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">02</span><b>Крепость браги до 21% ABV</b><span>Экстремальная толерантность к алкоголю. Дрожжи полностью досуха перерабатывают сахар без риска внезапной остановки брожения и «недоброда».</span></div>
+      <div class="ab3-card"><span class="ab3-seal">03</span><b>Формула «Всё включено» (All-in-One)</b><span>В каждом пакете — сбалансированная смесь минералов, аминокислот, витаминов и пеногасителей. Никаких дополнительных подкормок: просто растворите сахар и внесите дрожжи.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">04</span><b>Чистый спирт без запаха и сивушных масел</b><span>Штаммы селекционированы так, чтобы свести к минимуму выработку ацетона, эфиров и сивушных масел. Брага пахнет мягко, а дистиллят требует меньшей очистки.</span></div>
+      <div class="ab3-card"><span class="ab3-seal">05</span><b>Термостойкость и стабильность</b><span>Устойчивы к скачкам температуры до +32 °C. Процесс идёт ровно и предсказуемо даже в тёплых помещениях.</span></div>
       <a class="ab3-card ab3-more" href="#lineup"><b>Вся продукция</b><svg class="i"><use href="#i-arrow"/></svg></a>
     </div>
   </section>
@@ -103,7 +105,7 @@
       </article>
       <article class="pcard">
         <div class="pcard-top"><span class="pcard-marks"></span></div>
-        <a class="pcard-pic" href="c48.html" tabindex="-1"><img src="img/whisky-v2.png" alt="Пакет Whisky Turbo"></a>
+        <a class="pcard-pic" href="c48.html" tabindex="-1"><img class="zw2" src="img/whisky-v2.png" alt="Пакет Whisky Turbo"></a>
         <div class="pcard-row"><h3><a href="c48.html">Whisky Turbo</a></h3></div>
         <dl class="pcard-spec"><div><dt>Крепость браги</dt><dd>до 14%</dd></div><div><dt>Вес пакета</dt><dd>72 г</dd></div><div><dt>Срок брожения</dt><dd>4–5 дней</dd></div></dl>
       </article>
@@ -134,6 +136,18 @@
   </section>
 
 
+  <!-- производство (клиент 02.10): фото конвейера + абзац -->
+  <section class="sec c prod-sec" id="production">
+    <div class="pnl-head ttl"><h2 class="display d2 rv">Производство</h2></div>
+    <div class="prod">
+      <figure class="prod-pic"><img src="img/production.jpg" alt="Линия фасовки дрожжей Дабл Снейк"></figure>
+      <div class="prod-text">
+        <p class="prod-lead">Современное производство в России</p>
+        <p>Дрожжи Дабл Снейк выпускаются на автоматизированной линии в Москве: точное дозирование компонентов, герметичная фасовка и контроль каждой партии на всех этапах — от входного сырья до готового пакета. Мы работаем по высочайшим стандартам качества, чтобы каждый пакет давал одинаково предсказуемый результат.</p>
+        <span class="prod-addr">Россия, 107143, г. Москва, 1-й Иртышский пр-д, 10с5</span>
+      </div>
+    </div>
+  </section>
   <!-- оригинал: признак от клиента 30.09 — строка «Изготовитель» на обороте пакета -->
   <section class="sec c orig-sec" id="original">
     <div class="pnl-head ttl"><h2 class="display d2 rv">Как отличить оригинал</h2><p>Оригинальные дрожжи маркируются производителем и правообладателем — ООО «Русс-маркет».</p></div>
@@ -147,13 +161,13 @@
     </div>
     <div class="orig orig1">
       <div class="orig-pic">
-        <span class="ob-pack ob-pack2"><img src="img/c48-back-cut.png" alt="Нижняя часть оборота пакета C48 Extreme со строкой «Изготовитель»"><span class="hot" style="left:8.1%;top:83%">1</span></span>
+        <span class="ob-pack ob-pack3"><img src="img/c48-back-v3.jpg" alt="Нижняя часть оборота пакета C48 Extreme: строки «Изготовитель» и «Адрес производства»"><span class="hot" style="left:11.6%;top:75.6%">1</span></span>
       </div>
       <div class="ob-text">
         <div class="label ob-kicker">Где смотреть</div>
         <div class="display d3">Внизу оборота,<br>под штрихкодом</div>
-        <div class="ob-mark"><span class="hr-n">1</span><span>Изготовитель: ООО «Русс-маркет», Россия, 630005, г.&nbsp;Новосибирск, ул.&nbsp;Николая Островского, д.&nbsp;49. даблснейк.рф</span></div>
-        <div class="ob-warn"><svg class="i"><use href="#i-alert"/></svg><span><b>Другой изготовитель на пачке — не оригинал</b>Все остальные дрожжи под этим названием не являются оригинальными.</span></div>
+        <div class="ob-mark"><span class="hr-n">1</span><span>Изготовитель: ООО «Русс-маркет», Россия, 630005, г.&nbsp;Новосибирск, ул.&nbsp;Николая Островского, д.&nbsp;49. даблснейк.рф<small>Адрес производства: Россия, 107143, г.&nbsp;Москва, 1-й Иртышский пр-д, 10с5</small></span></div>
+        <div class="ob-warn ob-ru"><svg class="i"><use href="#i-shield"/></svg><span><b>Дрожжи под ТМ «Double Snake» теперь производятся исключительно в РФ</b>Мы улучшили состав дрожжей, качество брожения довели до идеала.</span></div>
         <a class="btn btn-dark ob-buy" href="#buy">Где купить оригинал <svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -195,7 +209,6 @@
         <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
         <fieldset class="who2"><legend>Кто вы <span>— обязательно</span></legend><label><input type="radio" name="w1" value="shop" required><span>Магазин</span></label><label><input type="radio" name="w1" value="mp"><span>Продавец на маркетплейсе</span></label><label><input type="radio" name="w1" value="opt"><span>Оптовик</span></label></fieldset>
         <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
-        <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></div>
       </form>
     </div>
   </section>
@@ -219,27 +232,22 @@
         <div class="ft-label">Бренды</div>
         <a href="#lineup">Дабл Снейк</a><a href="#brands">Double Distill</a><a href="#brands">Dr. Drink</a>
       </div>
-      <div class="ft-bottom ft-bottom-l"><span>© 2026 Дабл Снейк — официальный сайт бренда</span><a href="#">Политика обработки персональных данных</a></div>
+      <div class="ft-bottom ft-bottom-l"><span>© 2026 Дабл Снейк — официальный сайт бренда</span></div>
     </div>
     <div class="ft-r">
       <div class="ft-label">Опт и вопросы — ответим на почту</div>
       <a class="ft-mail" href="mailto:rus-samogon@yandex.ru">rus-samogon@yandex.ru</a>
       <dl class="ft-req">
         <div><dt>Компания</dt><dd>ООО «Русс-маркет»</dd></div>
-        <div><dt>ИНН</dt><dd>5405457179</dd></div>
+        <div><dt>ИНН / КПП</dt><dd>5405457179 / 540601001</dd></div>
         <div><dt>ОГРН</dt><dd>1125476102982</dd></div>
-        <div><dt>Город</dt><dd>Новосибирск</dd></div>
+        <div><dt>ОКТМО</dt><dd>50401386</dd></div>
+        <div><dt>Адрес</dt><dd>Новосибирская область, г. Новосибирск, ул. Николая Островского, д. 49</dd></div>
       </dl>
-      <div class="ft-bottom ft-bottom-r"><span></span><span>Концепт 2 · 28.09.2026</span></div>
+      <div class="ft-bottom ft-bottom-r"><span></span></div>
     </div>
   </div>
-</footer>
-<nav class="tabbar" aria-label="Навигация">
-  <a href="index.html" class="on" aria-label="Главная"><svg class="i" ><use href="#i-home"/></svg></a>
-  <a href="#lineup" aria-label="Продукция"><svg class="i" ><use href="#i-box"/></svg></a>
-  <a href="#buy" aria-label="Где купить"><svg class="i" ><use href="#i-cart"/></svg></a>
-  <a href="#contact" data-contact aria-label="Связаться"><svg class="i" ><use href="#i-chat"/></svg></a>
-</nav><dialog class="cdlg" id="contact-dlg" aria-labelledby="cdlg-title">
+</footer><dialog class="cdlg" id="contact-dlg" aria-labelledby="cdlg-title">
   <button class="cdlg-x" type="button" aria-label="Закрыть" data-close><svg class="i"><use href="#i-close"/></svg></button>
   <div class="cform">
     <div class="cform-l">
@@ -252,7 +260,6 @@
       <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
       <fieldset class="who2"><legend>Кто вы <span>— обязательно</span></legend><label><input type="radio" name="w2" value="shop" required><span>Магазин</span></label><label><input type="radio" name="w2" value="mp"><span>Продавец на маркетплейсе</span></label><label><input type="radio" name="w2" value="opt"><span>Оптовик</span></label></fieldset>
       <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
-      <div class="consent">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></div>
     </form>
   </div>
 </dialog>

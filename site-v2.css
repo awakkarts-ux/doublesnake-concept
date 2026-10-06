@@ -1,4 +1,4 @@
-/* Правки клиента 01.10 («Дубль 2 сайт дрожжи (2).docx») — только для index-v2.html, поверх site.css */
+/* Правки клиента 01.10 («Дубль 2 сайт дрожжи (2).docx») — для index.html и c48.html, поверх site.css */
 
 /* 1. первый экран как 28.09: левая половина белая, справа красная с пачками; шапка теперь 80 px */
 .first-screen { background: var(--white); min-height: calc(100vh - 80px); min-height: calc(100svh - 80px); }
@@ -116,7 +116,7 @@ footer.ft .ft-adv { border-bottom: 1px solid var(--dark-line) !important; }
   .pb-text { left: var(--inL); right: auto; bottom: 32px; max-width: 42%; }
   .pb-fan { top: 24px; bottom: auto; right: 3%; width: 60%; height: 82%; }
 }
-/* вариант Б (index-v2.html?brands=b): баннер ниже и шире — обрезан верх, раскладка прежняя (логотип и пачки внизу) */
+/* вариант Б (index.html?brands=b): баннер ниже и шире — обрезан верх, раскладка прежняя (логотип и пачки внизу) */
 .brands-b .pb-card { aspect-ratio: 2 / 1; }
 @media (min-width: 768px) { .brands-b .pb-fan { top: auto; bottom: -6%; height: 96%; } .brands-b .pb-text { max-width: 36%; } }
 
@@ -191,3 +191,239 @@ body::before { display: none !important; }
 /* «Оригинал»: вырезанный оборот вплотную к верху карточки, низ — где был конец фото */
 .orig1 .orig-pic { padding: 0 24px 24px; align-items: flex-start; }
 .ob-pack2 { aspect-ratio: 1194 / 712; }
+
+/* ===== правки клиента 02.10 («Дабл снейк правки от клиента.docx» + Telegram) ===== */
+/* преимущества — 5 пунктов клиента + «Вся продукция»: 3 в ряд */
+.about3 .ab3-grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ab3-grid3 .ab3-card b { font-size: clamp(22px, 1.8vw, 28px); line-height: 1.05; }
+.ab3-grid3 .ab3-card > span:last-child { margin-top: 18px; }
+.about3 .ttl h2 { white-space: normal; }
+@media (max-width: 991px) { .about3 .ab3-grid3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .about3 .ab3-grid3 { grid-template-columns: 1fr; } }
+/* производство: фото | текст */
+.prod-sec { padding-left: var(--pad); padding-right: var(--pad); }
+.prod-sec .ttl { padding: 0; margin-bottom: 32px; }
+.prod { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+.prod-pic { margin: 0; background: var(--white); overflow: hidden; }
+.prod-pic img { width: 100%; height: 100%; object-fit: cover; }
+.prod-text { display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 48px; background: var(--white); }
+.prod-lead { margin: 0; font: 900 clamp(30px, 2.6vw, 42px)/1 var(--display); text-transform: uppercase; }
+.prod-text p:not(.prod-lead) { margin: 0; font: 500 17px/1.55 var(--text); color: var(--ink-2); }
+.prod-addr { font: 600 14px/1.3 var(--cond); text-transform: uppercase; color: var(--ink); }
+@media (max-width: 991px) { .prod { grid-template-columns: 1fr; } .prod-text { padding: 28px 20px; } }
+/* оригинал: обновлённый оборот на тёмном — фото на всю карточку; строка производства; РФ вместо «не оригинал» */
+.orig1 .orig-pic { padding: 0; align-items: stretch; background: #2a2b2d; overflow: hidden; }
+.ob-pack3 { position: relative; display: block; width: 100%; height: 100%; min-height: 360px; }
+.ob-pack3 img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 20% 70%; filter: none; transform: none; }
+.ob-mark small { display: block; margin-top: 8px; font: 500 14px/1.4 var(--text); color: var(--ink-2); }
+.ob-ru svg.i { color: var(--red); }
+.ob-ru b { color: var(--ink); }
+/* виски — пачка на фото мельче (79 % кадра против ~88 % у остальных) */
+.pcard-pic img.zw2 { height: 112%; }
+/* реквизиты в подвале — длинный адрес переносится */
+.ft-req dd { line-height: 1.35; }
+/* документы на странице товара — настоящие изображения */
+.doc-img { display: block; aspect-ratio: 3 / 4; overflow: hidden; background: var(--white); }
+.doc-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .3s ease; }
+.doc-img:hover img { transform: scale(1.02); }
+.orig1 .orig-pic { display: flex; align-items: center; }
+.ob-pack3 { height: auto; min-height: 0; aspect-ratio: 1376 / 768; }
+.ob-pack3 img { object-fit: contain; }
+/* линии сетки убраны и на странице товара (как на главной) */
+.vl1::before, footer.vl-dark::before { display: none !important; }
+
+/* ===================== страница товара v3 + адаптив (03.10) ===================== */
+/* --- страница товара: белые панели на сером, как на главной --- */
+.app-pd { background: transparent; }
+.pd3 { padding-top: 24px; padding-left: var(--pad); padding-right: var(--pad); }
+.pd3-crumbs { padding: 0 0 20px; }
+.pd3-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.pd3-pic { position: relative; margin: 0; display: grid; place-items: center; aspect-ratio: 1; background: var(--white); }
+.pd3-pic img { width: 82%; height: 82%; object-fit: contain; }
+.pd3-pic .tag { position: absolute; left: 24px; top: 24px; font: 700 13px/1 var(--cond); text-transform: uppercase; }
+.pd3-info { display: flex; flex-direction: column; justify-content: center; gap: 24px; padding: 48px; background: var(--white); }
+.pd3-brand { height: 52px; width: auto; align-self: flex-start; }
+.pd3-title { font-size: clamp(56px, 6vw, 96px); line-height: .86; }
+.pd3-lead { margin: 0; max-width: 460px; font: 500 18px/1.45 var(--text); color: var(--ink-2); }
+.pd3-spec { gap: 14px 36px; margin: 0; padding: 20px 0; }
+.pd3-spec dd { font-size: 20px; }
+.pd3-spec div:first-child dd { color: var(--red); }
+.pd3-buy { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; }
+.pd3-main { height: 56px; gap: 12px; font-size: 16px; }
+.pd3-mp-ico { height: 14px; width: auto; filter: brightness(0) invert(1); }
+.pd3-mp { height: 56px; padding: 0 20px; background: var(--page); transition: background-color .2s ease; }
+.pd3-mp:hover { background: #dcdcdc; }
+.pd3-mp img { height: 18px; width: auto; }
+.pd3-mp img[src$="mp-ym.svg"] { height: 24px; }
+.pd3-opt { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font: 700 14px/1.2 var(--cond); text-transform: uppercase; color: var(--ink-2); transition: color .2s ease; }
+.pd3-opt:hover { color: var(--red); }
+.pd3-opt svg.i { width: 16px; height: 16px; }
+/* вкладки — белая панель */
+.pd3-tabs { padding: 24px var(--pad) 0; }
+.pd3-pnl { padding: 32px 48px 48px; }
+.pd3-pnl .seg { max-width: 540px; }
+.pd3-pnl .modes { margin: 0; }
+.pd3-pnl .pd-docs { grid-template-columns: repeat(auto-fill, minmax(220px, 280px)); }
+.pd-rel { padding-bottom: 72px; }
+@media (max-width: 1099px) {
+  .pd3-info { padding: 32px; gap: 20px; }
+  .pd3-buy { grid-template-columns: 1fr 1fr; }
+  .pd3-main { grid-column: 1 / -1; }
+}
+@media (max-width: 767px) {
+  .pd3 { padding-top: 16px; }
+  .pd3-crumbs { padding-bottom: 12px; }
+  .pd3-grid { grid-template-columns: 1fr; gap: 12px; }
+  .pd3-info { padding: 24px 20px; gap: 16px; }
+  .pd3-brand { height: 40px; }
+  .pd3-title { font-size: 52px; }
+  .pd3-lead { font-size: 16px; }
+  .pd3-spec { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; padding: 4px 0; }
+  .pd3-spec dd { font-size: 18px; }
+  .pd3-tabs { padding-top: 12px; }
+  .pd3-pnl { padding: 20px 16px 28px; }
+  .pd3-pnl .seg button { font-size: 12px; padding: 0 2px; }
+  .pd-rel { padding-bottom: 48px; }
+}
+
+/* --- шапка: меню в шапке до 992, таб-бар — только ниже (раньше включался с 1099 и дублировал шапку на планшете) --- */
+@media (min-width: 992px) and (max-width: 1099px) {
+  .hd4-in { grid-template-columns: auto 1fr auto; }
+  .hd4-nav { display: flex; gap: 20px; justify-self: center; }
+  .hd4-nav a { font-size: 14px; }
+  html { scroll-padding-top: 81px; }
+}
+@media (min-width: 992px) { .tabbar { display: none !important; } }
+/* логотип в шапке — тач-цель 44 */
+.hd4-logo { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* --- страница товара на мобильном: липких элементов не больше двух — шапка + полоса покупки; таб-бар здесь не нужен --- */
+.pd3-tabs ~ .buybar { display: none; }
+@media (max-width: 991px) {
+  body:has(.pd3) .tabbar { display: none !important; }
+  .pd3-tabs ~ .buybar { display: grid; position: sticky; bottom: 0; margin: 0; border-radius: 0; grid-template-columns: 1fr auto; gap: 12px; padding: 12px var(--pad); }
+  .pd3-tabs ~ .buybar .acts { display: flex; }
+  .pd3-tabs ~ .buybar .btn { height: 44px; padding: 0 18px; }
+  body:has(.pd3) footer.ft .ft-r { padding-bottom: 32px; }
+}
+
+/* --- тач-цели: названия в карточках и крошки --- */
+.pcard-row h3 a { display: inline-block; padding: 10px 0; margin: -10px 0; }
+.crumbs a, .crumbs span { display: inline-flex; align-items: center; min-height: 32px; }
+@media (max-width: 767px) { .crumbs a, .crumbs span { min-height: 44px; } .crumbs { gap: 0; } }
+.ha-flag { min-height: 40px; }
+
+/* --- «Где купить» на мобильном: 2 колонки, но ниже и с кеглем, при котором «Яндекс Маркет» не рвётся по слову --- */
+@media (max-width: 767px) {
+  .buy2-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .buy2-card { min-height: 132px; padding: 16px 14px; }
+  .buy2-card .hbuy-t { font-size: 17px; margin-top: 24px; }
+  .mp-logo img[src$="mp-ozon.svg"] { height: 14px; }
+  .mp-logo img[src$="mp-wb.svg"] { height: 14px; }
+  .mp-logo img[src$="mp-ym.svg"] { height: 20px; }
+  .buy2-card .hg-meta { display: none; }
+}
+@media (max-width: 359px) { .buy2-grid { grid-template-columns: 1fr; } }
+
+/* --- первый экран на планшете (768–991): половины в столбик, логотип по центру --- */
+@media (max-width: 991px) {
+  .first-screen .hero2 { grid-template-columns: 1fr; }
+  .first-screen .h2-text { padding: 40px var(--pad) 44px; }
+  .first-screen .h2-art { min-height: 520px; }
+}
+@media (max-width: 767px) { .first-screen .h2-art { min-height: 440px; } .first-screen .h2-text { padding: 28px var(--pad) 32px; } }
+
+/* --- «О бренде» на мобильном: утверждение мельче, чтобы не было 8 строк на экран --- */
+@media (max-width: 767px) { .ab3-say { font-size: 28px; line-height: 1.05; } }
+
+/* --- производство и оригинал на планшете: фото сверху, текст под ним --- */
+@media (max-width: 991px) { .orig1 { grid-template-columns: 1fr; } .ob-text { padding: 32px; } }
+.pd3-title { white-space: nowrap; }
+@media (max-width: 767px) { .pd3-title { white-space: normal; } }
+/* тач-цели в подвале и в меню */
+@media (max-width: 991px) { .ft-col a { padding: 12px 0; } .ft-mail { display: inline-block; padding: 10px 0; } }
+.hd4-nav a { padding: 14px 0; }
+/* товар: на планшете в столбик, заголовок в одну строку только на десктопе */
+@media (max-width: 991px) { .pd3-grid { grid-template-columns: 1fr; } .pd3-pic { aspect-ratio: 4 / 3; } .pd3-title { white-space: normal; } .pd3-info > * { min-width: 0; } }
+.pd3-grid > * { min-width: 0; }
+.pd3-pnl .pd-text { max-width: 760px; }
+
+/* нижний таб-бар убран совсем (решение пользователя 03.10) — снимаем отступы, которые были под него */
+.tabbar { display: none !important; }
+@media (max-width: 1099px) { footer.ft .ft-r, footer { padding-bottom: 32px !important; } .buybar { bottom: 0 !important; } }
+body { padding-bottom: 0 !important; }
+
+/* ===================== правки удобства адаптива (06.10) ===================== */
+/* 1. бургер-меню < 992 */
+.hd4-burger, .mnav { display: none; }
+@media (max-width: 991px) {
+  .hd4-act { display: flex; align-items: center; gap: 8px; }
+  .hd4-burger { display: grid; place-content: center; gap: 5px; width: 44px; height: 44px; padding: 0; border: 0; background: var(--ink); cursor: pointer; }
+  .hd4-burger span { display: block; width: 20px; height: 2px; background: #fff; transition: transform .25s ease, opacity .2s ease; }
+  .hd4-burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hd4-burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .hd4-burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .mnav:not([hidden]) { display: flex; flex-direction: column; position: fixed; z-index: 39; left: 0; right: 0; top: 64px; bottom: 0; padding: 12px var(--pad) 24px; background: var(--white); overflow-y: auto; }
+  .mnav-list { display: flex; flex-direction: column; }
+  .mnav-list a { display: flex; align-items: center; min-height: 60px; font: 900 30px/1 var(--display); text-transform: uppercase; box-shadow: inset 0 -1px 0 var(--line); }
+  .mnav-list a:hover { color: var(--red); }
+  .mnav-cta { height: 56px; margin-top: 24px; font-size: 16px; }
+  html.mnav-open, html.mnav-open body { overflow: hidden; }
+}
+@media (max-width: 767px) { .hd4 .hd-btn { padding: 0 14px; } }
+
+/* 2. каталог на телефоне в 2 колонки, компактные карточки */
+@media (max-width: 767px) {
+  .pnl-sec .pnl { padding: 16px 10px 16px; }
+  .cards-wrap { padding: 0 !important; }
+  .cards { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .pcard { padding: 12px 10px 14px; }
+  .pcard-top { min-height: 18px; }
+  .pcard-top .tag { font-size: 10px; padding: 0 6px; height: 20px; }
+  .pcard-marks svg.i { width: 16px; height: 16px; }
+  .pcard-pic { height: 150px; margin: 6px 0 12px; }
+  .pcard-row h3 { font-size: 15px; }
+  .pcard-spec { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 8px; margin-top: 10px; }
+  .pcard-spec div:first-child { grid-column: 1 / -1; }
+  .pcard-spec dd { font-size: 14px; }
+}
+@media (max-width: 359px) { .cards { grid-template-columns: 1fr !important; } .pcard-pic { height: 200px; } }
+
+/* 3. первый экран на планшете — две половины рядом */
+@media (min-width: 768px) and (max-width: 991px) {
+  .first-screen { min-height: calc(100svh - 64px); }
+  .first-screen .hero2 { grid-template-columns: 1fr 1fr; min-height: inherit; }
+  .first-screen .h2-text { padding: 32px 24px; }
+  .first-screen .h2-logo img { height: clamp(200px, 30vh, 320px); }
+  .first-screen .h2-sub { font-size: 28px; }
+  .first-screen .h2-art { min-height: 0; }
+  .first-screen .ha-main { height: min(56%, 46vw); }
+  .first-screen .ha-num { font-size: 56px; top: 24px; }
+}
+
+/* 4. «О бренде» на телефоне: утверждение мельче и влево */
+@media (max-width: 767px) {
+  .about3 { text-align: left; }
+  .ab3-say { font-size: 24px; line-height: 1.08; padding: 0 var(--pad); }
+  .ab3-sub { margin-left: 0; font-size: 15px; }
+}
+
+/* 5. мелочи: минимальный кегль подписей, полоса преимуществ в подвале 2×2, полоса покупки в одну строку */
+.pcard-spec dt { font-size: 12px; }
+@media (max-width: 767px) {
+  .pb-cap { font-size: 13px !important; }
+  .ft-adv { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }
+  .ft-adv i { display: none; }
+  .pd3-tabs ~ .buybar .nm span { display: none; }
+  .pd3-tabs ~ .buybar .nm { white-space: nowrap; }
+}
+@media (max-width: 991px) { .mnav-list a { box-shadow: none; min-height: 56px; } }
+@media (max-width: 767px) { .pcard-top .tag { font-size: 11px; } }
+/* карточка на телефоне: параметры строками «подпись — значение», без переноса подписей */
+@media (max-width: 767px) {
+  .pcard-spec { display: flex; flex-direction: column; gap: 4px; }
+  .pcard-spec div { flex-direction: row; justify-content: space-between; align-items: baseline; gap: 6px; }
+  .pcard-spec dt { font-size: 11px; white-space: nowrap; }
+  .pcard-spec dd { font-size: 13px; white-space: nowrap; }
+}
+@media (min-width: 768px) and (max-width: 991px) { .first-screen .h2-sub { font-size: 24px; } }
