@@ -202,7 +202,7 @@
     </div>
     <div class="ft-r">
       <div class="ft-label">Опт и вопросы — ответим на почту</div>
-      <a class="ft-mail" href="mailto:rus-samogon@yandex.ru">rus-samogon@yandex.ru</a>
+      <a class="ft-mail" href="mailto:russmarketllc@mail.ru">russmarketllc@mail.ru</a>
       <dl class="ft-req">
         <div><dt>Компания</dt><dd>ООО «Русс-маркет»</dd></div>
         <div><dt>ИНН / КПП</dt><dd>5405457179 / 540601001</dd></div>
@@ -218,15 +218,16 @@
   <div class="cform">
     <div class="cform-l">
       <h2 class="display cform-title" id="cdlg-title">Связаться<br>с нами</h2>
-      <p class="cform-sub">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+      <p class="cform-sub">Напишите нам на почту — ответим в ближайшее время</p>
     </div>
-    <form class="cform-f" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Заявка отправлена';">
-      <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Ваше имя"></label>
-      <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7 999 999-99-99"></label>
-      <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
-      <fieldset class="who2"><legend>Кто вы <span>— обязательно</span></legend><label><input type="radio" name="w2" value="shop" required><span>Магазин</span></label><label><input type="radio" name="w2" value="mp"><span>Продавец на маркетплейсе</span></label><label><input type="radio" name="w2" value="opt"><span>Оптовик</span></label></fieldset>
-      <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
-    </form>
+    <div class="cmail">
+        <span class="cmail-label">Почта для связи</span>
+        <a class="cmail-addr" href="mailto:russmarketllc@mail.ru">russmarketllc@mail.ru</a>
+        <p class="cmail-text">Запросить прайс можно через электронную почту.</p>
+        <a class="btn btn-red btn-block cform-btn" href="mailto:russmarketllc@mail.ru?subject=Запрос прайса">Написать на почту</a>
+        <p class="cmail-note">Мы не обрабатываем персональные данные.</p>
+      </div>
+
   </div>
 </dialog>
 <script src="site.js"></script></body>

@@ -188,7 +188,6 @@
         <div class="label ob-kicker">Где смотреть</div>
         <div class="display d3">Внизу оборота,<br>под штрихкодом</div>
         <div class="ob-mark"><span class="hr-n">1</span><span>Изготовитель: ООО «Русс-маркет», Россия, 630005, г.&nbsp;Новосибирск, ул.&nbsp;Николая Островского, д.&nbsp;49. даблснейк.рф<small>Адрес производства: Россия, 107143, г.&nbsp;Москва, 1-й Иртышский пр-д, 10с5</small></span></div>
-        <div class="ob-warn ob-ru"><svg class="i"><use href="#i-shield"/></svg><span><b>Дрожжи под ТМ «Double Snake» теперь производятся исключительно в РФ</b>Мы улучшили состав дрожжей, качество брожения довели до идеала.</span></div>
         <a class="btn btn-dark ob-buy" href="#buy">Где купить оригинал <svg class="i" style="width:18px;height:18px"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -214,23 +213,24 @@
       <details><summary>Какой выход спирта ожидать</summary><p>Из 1 кг сахара при полном сбраживании получается около 0,5 л спирта крепостью 96%. Точный выход зависит от режима и перегонки. <span class="label-s">(рыба)</span></p></details>
       <details><summary>Брага пахнет неприятно — что не так</summary><p>Резкий запах обычно появляется при перегреве выше 35 °C или нехватке сахара по таблице. Держите температуру в пределах режима. <span class="label-s">(рыба)</span></p></details>
       <details><summary>Как отличить оригинал</summary><p>Посмотрите строку «Изготовитель» внизу оборота пакета: у оригинала там указано ООО «Русс-маркет». Подробнее — в разделе <a href="#original" style="text-decoration:underline">«Как отличить оригинал»</a>.</p></details>
-      <details><summary>Можно ли купить оптом</summary><p>Да — нажмите <a href="#contact" data-contact style="text-decoration:underline">«Связаться»</a> и оставьте контакты, мы ответим.</p></details>
+      <details><summary>Можно ли купить оптом</summary><p>Да — нажмите <a href="#contact" data-contact style="text-decoration:underline">«Связаться»</a> и напишите нам на почту — ответим.</p></details>
     </div>
   </section>
-  <!-- связаться: общая лаконичная форма (как во всплывающем окне по кнопке «Связаться») -->
+  <!-- связаться: почта вместо формы (клиент 07.10), то же во всплывающем окне по кнопке «Связаться» -->
   <section class="cta-sec" id="contact">
     <div class="cform">
       <div class="cform-l">
         <h2 class="display cform-title">Связаться<br>с нами</h2>
-        <p class="cform-sub">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+        <p class="cform-sub">Напишите нам на почту — ответим в ближайшее время</p>
       </div>
-      <form class="cform-f" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Заявка отправлена';">
-        <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Ваше имя"></label>
-        <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7 999 999-99-99"></label>
-        <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
-        <fieldset class="who2"><legend>Кто вы <span>— обязательно</span></legend><label><input type="radio" name="w1" value="shop" required><span>Магазин</span></label><label><input type="radio" name="w1" value="mp"><span>Продавец на маркетплейсе</span></label><label><input type="radio" name="w1" value="opt"><span>Оптовик</span></label></fieldset>
-        <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
-      </form>
+      <div class="cmail">
+        <span class="cmail-label">Почта для связи</span>
+        <a class="cmail-addr" href="mailto:russmarketllc@mail.ru">russmarketllc@mail.ru</a>
+        <p class="cmail-text">Запросить прайс можно через электронную почту.</p>
+        <a class="btn btn-red btn-block cform-btn" href="mailto:russmarketllc@mail.ru?subject=Запрос прайса">Написать на почту</a>
+        <p class="cmail-note">Мы не обрабатываем персональные данные.</p>
+      </div>
+
     </div>
   </section>
 
@@ -257,7 +257,7 @@
     </div>
     <div class="ft-r">
       <div class="ft-label">Опт и вопросы — ответим на почту</div>
-      <a class="ft-mail" href="mailto:rus-samogon@yandex.ru">rus-samogon@yandex.ru</a>
+      <a class="ft-mail" href="mailto:russmarketllc@mail.ru">russmarketllc@mail.ru</a>
       <dl class="ft-req">
         <div><dt>Компания</dt><dd>ООО «Русс-маркет»</dd></div>
         <div><dt>ИНН / КПП</dt><dd>5405457179 / 540601001</dd></div>
@@ -273,15 +273,16 @@
   <div class="cform">
     <div class="cform-l">
       <h2 class="display cform-title" id="cdlg-title">Связаться<br>с нами</h2>
-      <p class="cform-sub">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+      <p class="cform-sub">Напишите нам на почту — ответим в ближайшее время</p>
     </div>
-    <form class="cform-f" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Заявка отправлена';">
-      <label class="field"><span>Имя</span><input autocomplete="name" placeholder="Ваше имя"></label>
-      <label class="field"><span>Телефон</span><input type="tel" autocomplete="tel" placeholder="+7 999 999-99-99"></label>
-      <label class="field"><span>Почта</span><input type="email" autocomplete="email" placeholder="Ваша почта"></label>
-      <fieldset class="who2"><legend>Кто вы <span>— обязательно</span></legend><label><input type="radio" name="w2" value="shop" required><span>Магазин</span></label><label><input type="radio" name="w2" value="mp"><span>Продавец на маркетплейсе</span></label><label><input type="radio" name="w2" value="opt"><span>Оптовик</span></label></fieldset>
-      <button class="btn btn-red btn-block cform-btn">Отправить заявку</button>
-    </form>
+    <div class="cmail">
+        <span class="cmail-label">Почта для связи</span>
+        <a class="cmail-addr" href="mailto:russmarketllc@mail.ru">russmarketllc@mail.ru</a>
+        <p class="cmail-text">Запросить прайс можно через электронную почту.</p>
+        <a class="btn btn-red btn-block cform-btn" href="mailto:russmarketllc@mail.ru?subject=Запрос прайса">Написать на почту</a>
+        <p class="cmail-note">Мы не обрабатываем персональные данные.</p>
+      </div>
+
   </div>
 </dialog>
 <script src="site.js"></script>
