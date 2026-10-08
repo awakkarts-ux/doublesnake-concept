@@ -179,7 +179,7 @@ main { min-width: 0; background: var(--white); }
 .signs { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .sign { padding: 20px var(--pad) 28px; border-right: 1px solid var(--line); background: var(--bg); }
 .sign:last-child { border-right: 0; }
-.sign .shot { aspect-ratio: 4 / 3; background: #fff url(img/c48.png) no-repeat; background-size: 260%; margin-bottom: 16px; position: relative; }
+.sign .shot { aspect-ratio: 4 / 3; background: #fff url(img/c48.webp) no-repeat; background-size: 260%; margin-bottom: 16px; position: relative; }
 .sign .shot::after { content: 'фото детали реальной пачки — от клиента'; position: absolute; left: 8px; bottom: 8px; font: 500 11px/1 var(--text); background: var(--ink); color: #fff; padding: 6px 8px; border-radius: 2px; }
 .s1 { background-position: 100% 0 !important; } .s2 { background-position: 50% 100% !important; } .s3 { background-position: 0 40% !important; }
 .sign h4 { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; font: 700 18px/1.1 var(--cond); text-transform: uppercase; }
