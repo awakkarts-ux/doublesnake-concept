@@ -21,8 +21,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500;600;700&family=Fira+Sans+Extra+Condensed:wght@800;900&family=Fira+Sans:wght@400;500&display=swap">
-<link rel="stylesheet" href="site.css?v=20261008-6">
-<link rel="stylesheet" href="site-v2.css?v=20261008-6">
+<link rel="stylesheet" href="site.css?v=20261008-7">
+<link rel="stylesheet" href="site-v2.css?v=20261008-7">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -53,13 +53,13 @@
   <button class="btn btn-red mnav-cta" type="button" data-contact>Связаться</button>
 </nav>
 <div class="app">
-<main class="soon">
+<main class="nf">
 <!-- 404: отдаётся сервером по ErrorDocument (.htaccess); <base href="/"> — чтобы стили и картинки грузились с любого адреса -->
-  <section class="soon-hero">
-    <div class="display soon-code">404</div>
-    <h1 class="display soon-title">Страница<br>не найдена</h1>
-    <p class="soon-sub">Возможно, ссылка устарела или в адресе опечатка.</p>
-    <div class="soon-acts"><a class="btn btn-red" href="index.html">На главную</a><a class="btn btn-dark" href="index.html#lineup">Продукция</a></div>
+  <section class="nf-hero">
+    <div class="display nf-code">404</div>
+    <h1 class="display nf-title">Страница<br>не найдена</h1>
+    <p class="nf-sub">Возможно, ссылка устарела или в адресе опечатка.</p>
+    <div class="nf-acts"><a class="btn btn-red" href="index.html">На главную</a><a class="btn btn-dark" href="index.html#lineup">Продукция</a></div>
   </section>
 </main>
 </div>
@@ -78,7 +78,7 @@
       </div>
       <div class="ft-col">
         <div class="ft-label">Бренды</div>
-        <a href="index.html#lineup">Дабл Снейк</a><a href="brands.html#dd">Double Distill</a><a href="brands.html#dr">Dr. Drink</a>
+        <a href="index.html#lineup">Дабл Снейк</a><a href="#" data-soon>Double Distill</a><a href="#" data-soon>Dr. Drink</a>
       </div>
       <div class="ft-bottom ft-bottom-l"><span>© 2026 Дабл Снейк — официальный сайт бренда</span></div>
     </div>
@@ -111,5 +111,9 @@
     </div>
   </div>
 </dialog>
-<script src="site.js?v=20261008-6"></script></body>
+<dialog class="cdlg cdlg-s" id="soon-dlg" aria-labelledby="soon-title">
+  <button class="cdlg-x" type="button" aria-label="Закрыть" data-close><svg class="i"><use href="#i-close"/></svg></button>
+  <div class="ccard ccard-s"><h2 class="display ccard-title" id="soon-title">Сайт<br>в разработке</h2></div>
+</dialog>
+<script src="site.js?v=20261008-7"></script></body>
 </html>

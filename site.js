@@ -69,13 +69,14 @@ document.querySelectorAll('.orig-row').forEach((r) => {
   ['mouseleave', 'blur'].forEach((e) => r.addEventListener(e, () => hot.classList.remove('on')));
 });
 
-// «Связаться»: любая кнопка/ссылка с data-contact открывает всплывающее окно с почтой
-const dlg = document.getElementById('contact-dlg');
-if (dlg) {
-  document.querySelectorAll('[data-contact]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); dlg.showModal(); }));
+// всплывающие окна: кнопка/ссылка с data-contact открывает «Связаться» (почта), с data-soon — «Сайт в разработке»
+[['data-contact', 'contact-dlg'], ['data-soon', 'soon-dlg']].forEach(([attr, id]) => {
+  const dlg = document.getElementById(id);
+  if (!dlg) return;
+  document.querySelectorAll(`[${attr}]`).forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); dlg.showModal(); }));
   dlg.querySelector('[data-close]').addEventListener('click', () => dlg.close());
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
-}
+});
 // бургер-меню (телефон и планшет): открыть/закрыть, Esc, клик по пункту закрывает, фон не скроллится
 const burger = document.querySelector('.hd4-burger'), mnav = document.getElementById('mnav');
 if (burger && mnav) {
