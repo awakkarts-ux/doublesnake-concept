@@ -462,11 +462,11 @@ body { padding-bottom: 0 !important; }
 
 /* страница 404 (404.html, отдаётся по ErrorDocument из .htaccess) */
 .nf { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 var(--pad); }
-.nf-hero { display: grid; justify-items: start; gap: 24px; padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 80px); }
+.nf-hero { display: grid; justify-items: center; text-align: center; gap: 24px; padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 80px); }
 .nf-code { font-size: clamp(96px, 16vw, 220px); color: var(--red); }
 .nf-title { font-size: clamp(48px, 7vw, 104px); }
 .nf-sub { max-width: 560px; margin: 0; font: 500 18px/1.45 var(--text); color: var(--ink-2); }
-.nf-acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.nf-acts { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
 @media (max-width: 767px) { .nf-sub { font-size: 16px; } .nf-acts .btn { flex: 1 1 100%; } }
 
 /* окно «Сайт в разработке» — баннеры и ссылки брендов Double Distill / Dr. Drink (менеджер 08.10) */
