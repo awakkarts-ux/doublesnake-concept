@@ -69,7 +69,7 @@ document.querySelectorAll('.orig-row').forEach((r) => {
   ['mouseleave', 'blur'].forEach((e) => r.addEventListener(e, () => hot.classList.remove('on')));
 });
 
-// «Связаться»: любая кнопка/ссылка с data-contact открывает всплывающую форму
+// «Связаться»: любая кнопка/ссылка с data-contact открывает всплывающее окно с почтой
 const dlg = document.getElementById('contact-dlg');
 if (dlg) {
   document.querySelectorAll('[data-contact]').forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); dlg.showModal(); }));
