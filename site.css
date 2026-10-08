@@ -1524,7 +1524,7 @@ body::before { content: ''; position: fixed; top: 0; bottom: 0; left: var(--side
 /* скругления убраны у всех элементов; круги (номера, точки, «+», маркер на обороте) остаются кругами */
 :root { --r: 0px; --pnl-r: 0px; }
 *, *::before, *::after { border-radius: 0 !important; }
-.cdlg-x, .faq4-list summary::after, .ft-adv i, .h4-mps i, .h4-rays, .hg-ava, .hot, .hr-n, .tabbar a, .pb-red::before { border-radius: 50% !important; }
+.age18, .cdlg-x, .faq4-list summary::after, .ft-adv i, .h4-mps i, .h4-rays, .hg-ava, .hot, .hr-n, .tabbar a, .pb-red::before { border-radius: 50% !important; }
 /* ===== «О бренде» v3 (реф Beanro): без заголовка; утверждение огромным капсом со встроенными пачками, абзац, карточки по линиям сетки ===== */
 .about3 { padding: 112px 0 0; text-align: center; }
 .ab3-say { max-width: 1240px; margin: 0 auto; padding: 0 var(--pad); font-size: clamp(38px, 4.6vw, 72px); line-height: 1.02; }
