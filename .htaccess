@@ -1,0 +1,15 @@
+# даблснейк.рф — Apache 2.2 (SpaceWeb)
+
+# своя страница «не найдено»
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+# www.даблснейк.рф → даблснейк.рф (один адрес для поисковиков), протокол сохраняется
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteCond %{HTTPS} =on
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]

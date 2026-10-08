@@ -459,3 +459,18 @@ body { padding-bottom: 0 !important; }
 .ft-bottom-r { justify-content: flex-end; }
 @media (min-width: 768px) { .ft-bottom-l { min-height: 84px; align-items: center; } }
 @media (max-width: 767px) { .ft-bottom-r { justify-content: flex-start; } }
+
+/* служебные страницы: заглушка брендов (brands.html, менеджер 08.10) и 404 (404.html) */
+.soon { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 var(--pad); }
+.soon-hero { display: grid; justify-items: start; gap: 24px; padding: clamp(56px, 9vw, 120px) 0 clamp(40px, 6vw, 80px); }
+.soon-code { font-size: clamp(96px, 16vw, 220px); color: var(--red); }
+.soon-title { font-size: clamp(48px, 7vw, 104px); }
+.soon-sub { max-width: 560px; margin: 0; font: 500 18px/1.45 var(--text); color: var(--ink-2); }
+.soon-acts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.soon-brands { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding-bottom: clamp(56px, 8vw, 104px); }
+.soon-brand { position: relative; display: grid; place-items: center; aspect-ratio: 16 / 9; padding: 40px; scroll-margin-top: 96px; }
+.soon-brand img { width: auto; max-width: 80%; height: clamp(96px, 11vw, 168px); object-fit: contain; }
+.soon-brand .label { position: absolute; left: 24px; top: 24px; }
+.soon-dd { background: #141414; color: var(--on-dark); }
+.soon-dr { background: #efe7d6; color: var(--ink); }
+@media (max-width: 767px) { .soon-brands { grid-template-columns: 1fr; gap: 16px; } .soon-sub { font-size: 16px; } .soon-acts .btn { flex: 1 1 100%; } }
